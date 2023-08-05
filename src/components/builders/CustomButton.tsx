@@ -1,5 +1,6 @@
+import React from "react";
 
-const CustomButton = () => {
+const CustomButton = (): React.JSX.Element => {
     return <button>CustomButton</button>;
 };
 
