@@ -19,7 +19,7 @@
     "rules": {
         "linebreak-style": "off",
         "no-unused-vars": "warn",
-        "import/no-unresolved": "off",
+        "import/no-unresolved": "warn",
         "no-undef": "warn",
         "semi": "off",
         "padded-blocks": "off",
