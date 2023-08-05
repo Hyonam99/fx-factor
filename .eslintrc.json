@@ -28,21 +28,21 @@
         "comma-dangle": "off",
         "quotes": "off",
         "object-curly-spacing":"off"
-    },
-    "settings": {
-        "import/parsers": {
-          "@typescript-eslint/parser": [
-            ".ts",
-            ".tsx"
-          ]
-        },
-        "import/resolver": {
-          "typescript": {
-            "alwaysTryTypes": true,
-            "project": [
-              "./tsconfig.json"
-            ]
-          }
-        }
-      }
+    }
+    // "settings": {
+    //     "import/parsers": {
+    //       "@typescript-eslint/parser": [
+    //         ".ts",
+    //         ".tsx"
+    //       ]
+    //     },
+    //     "import/resolver": {
+    //       "typescript": {
+    //         "alwaysTryTypes": true,
+    //         "project": [
+    //           "./tsconfig.json"
+    //         ]
+    //       }
+    //     }
+    //   }
 }

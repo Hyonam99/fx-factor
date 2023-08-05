@@ -26,7 +26,7 @@
       "incremental": true,
     },
     "include": [
-      "src/**/*", "**/*.ts", "**/*.tsx", "src/index"
+      "src/**/*", "**/*.ts", "**/*.tsx", "src/index.tsx"
     ],
     "exclude": ["node_modules"]
 }
