@@ -1,0 +1,220 @@
+@import '../../../style-palette';
+
+.community-container {
+    background: url('https://res.cloudinary.com/maesan-product/image/upload/v1693229033/fx-factor/community-bg_avekup.jpg');
+    min-height: 31rem;
+    padding: 0 !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .community-container-wrapper {
+        background: rgba($color: #000000, $alpha: 0.5);
+        min-height: inherit;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: .6rem;
+
+        .community-container_content {
+            color: $text-white;
+            max-width: 40%;
+            margin-left: 8rem;
+            margin-top: 3rem;
+            h1 {
+                text-transform: capitalize;
+                font-size: 2.7rem;
+                line-height: 68px;
+                margin: 0;
+                word-spacing: 2px;
+                letter-spacing: 2px;
+                text-align: left;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 0;
+                word-spacing: 1px;
+                text-align: left;
+            }
+        }
+
+        .community-container_button {
+            margin-left: 8rem;
+
+            button {
+                background-color: $text-white;
+                color: $text-dark;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .community-container {
+    
+        .community-container-wrapper {
+    
+            .community-container_content {
+                color: $text-white;
+                max-width: 54%;
+                margin-left: 6rem;
+                margin-top: 3rem;
+                h1 {
+                    text-transform: capitalize;
+                    font-size: 2.7rem;
+                    line-height: 68px;
+                    margin: 0;
+                    word-spacing: 2px;
+                    letter-spacing: 2px;
+                    text-align: left;
+                    font-weight: 600;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                }
+            }
+    
+            .community-container_button {
+                margin-left: 6rem;
+    
+                button {
+                    background-color: $text-white;
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .community-container {
+    
+        .community-container-wrapper {
+    
+            .community-container_content {
+                color: $text-white;
+                max-width: 60%;
+                margin-left: 3rem;
+                margin-top: 2rem;
+                h1 {
+                    text-transform: capitalize;
+                    font-size: 2.7rem;
+                    line-height: 68px;
+                    margin: 0;
+                    word-spacing: 2px;
+                    letter-spacing: 2px;
+                    text-align: left;
+                    font-weight: 600;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                }
+            }
+    
+            .community-container_button {
+                margin-left: 3rem;
+    
+                button {
+                    background-color: $text-white;
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .community-container {
+        min-height: 21rem;
+        .community-container-wrapper {
+    
+            .community-container_content {
+                color: $text-white;
+                max-width: 80%;
+                margin-left: 2rem;
+                margin-top: 1.6rem;
+                h1 {
+                    text-transform: capitalize;
+                    font-size: 2rem;
+                    line-height: 48px;
+                    margin: 0;
+                    word-spacing: 2px;
+                    letter-spacing: 1px;
+                    text-align: left;
+                    font-weight: 600;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                }
+            }
+    
+            .community-container_button {
+                margin-left: 2rem;
+    
+                button {
+                    background-color: $text-white;
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 398px) {
+    .community-container {
+        min-height: 18rem;
+        .community-container-wrapper {
+    
+            .community-container_content {
+                color: $text-white;
+                max-width: 100%;
+                margin-left: 0;
+                margin-top: 0;
+                h1 {
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                    line-height: 48px;
+                    margin: 0;
+                    word-spacing: 1px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    font-weight: 600;
+                }
+    
+                p {
+                    font-size: .8rem;
+                    margin: 0;
+                    word-spacing: 0;
+                    text-align: left;
+                }
+            }
+    
+            .community-container_button {
+                margin-left: 0;
+    
+                button {
+                    background-color: $text-white;
+                    color: $text-dark;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}

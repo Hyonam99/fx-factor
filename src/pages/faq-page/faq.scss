@@ -1,0 +1,71 @@
+@import '../../style-palette';
+
+@mixin reset-accordion {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid grey !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: .8rem !important;
+}
+
+.faq-container {
+    padding: 1rem 4rem 4rem;
+    article {
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2.8rem;
+            line-height: 48px;
+        }
+    }
+
+    .faq-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.8rem;
+
+        .faq-content-left {
+            .faq-accordion {
+                @include reset-accordion();
+            }
+        }
+        .faq-content-right {
+            .faq-accordion {
+                @include reset-accordion();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 848px) {
+    .faq-container {
+        padding: 1rem 2rem 2rem;
+        article {
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 2.8rem;
+                line-height: 48px;
+            }
+        }
+    
+        .faq-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 1rem;
+    
+            .faq-content-left {
+                .faq-accordion {
+                    @include reset-accordion();
+                }
+            }
+            .faq-content-right {
+                .faq-accordion {
+                    @include reset-accordion();
+                }
+            }
+        }
+    }
+}

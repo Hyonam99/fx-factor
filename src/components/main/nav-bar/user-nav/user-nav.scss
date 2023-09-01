@@ -1,0 +1,70 @@
+@import '../../../../style-palette';
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 2rem;
+    background: $bg-dark;
+    color: $text-white;
+
+    ul {
+        flex: .5;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .7rem;
+
+        li {
+            cursor: pointer;
+            pointer-events: all;
+            a {
+                color: white;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                a {
+                    color: #dbffd7;
+                    border-bottom: 3px solid #dbffd7;
+                    transition: 0.2s ease-in all;
+                }
+            }
+        }
+    }
+
+    .mobile-toggle-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .8rem 2rem;
+        background: $bg-dark;
+        color: $text-white;
+    
+        ul {
+            display: none;
+        }
+
+        .mobile-toggle-btn {
+            display: block;
+            pointer-events: all;
+        }
+
+    }
+}
+
+.mobile-nav-links {
+    color: $text-dark !important;
+
+    a {
+        color: $text-dark !important;
+    }
+}

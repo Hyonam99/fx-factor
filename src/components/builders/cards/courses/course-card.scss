@@ -1,0 +1,17 @@
+@import '../../../../style-palette';
+
+.card-button-action {
+    
+    button {
+        width: 100%;
+        background: $primary-color;
+        color: $text-white;
+        border-radius: 4px !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}

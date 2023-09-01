@@ -1,8 +1,17 @@
 import React from "react";
+import { Hero, MarketPricing, Marquee, Courses, Featured, Community, Testimonial } from "components/components-exports";
 
 const HomePage = (): React.JSX.Element => {
     return (
-        <div>HomePage</div>
+        <>
+            <Hero />
+            <MarketPricing />
+            <Courses limit={3}/>
+            <Marquee />
+            <Featured />
+            <Community />
+            <Testimonial />
+        </>
     )
 };
 

@@ -1,0 +1,203 @@
+@import '../../../style-palette';
+
+@mixin bg-image-props {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // animation: kenburns-top 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 7s infinite reverse backwards;
+}
+
+.hero-container {
+    padding: 0 !important;
+    animation: changeBackground 15s infinite;    
+
+    .hero-container_wrapper {
+        background: #00060ea8;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $text-white;
+
+        h1 {
+            font-size: 6rem;
+            line-height: 96px;
+            margin: 0;
+            letter-spacing: 4px;
+            word-spacing: 4px;
+            text-align: center;
+        }
+    
+        h5 {
+            font-size: 1.3rem;
+            margin: 0;
+            word-spacing: 3px;
+            text-align: center;
+        }
+
+        .hero-container_wrapper_buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            gap: 1.2rem;
+
+            button:nth-child(2) {
+                &:hover,
+                &:focus{
+                    background: #580909;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+
+}
+  
+
+@keyframes changeBackground {
+    0%, 33.33% {
+        background-image: url('../../../assets/images/hero-bg-chart.jpg');
+        @include bg-image-props();
+    }
+    33.34%, 66.66% {
+        background-image: url('../../../assets/images/hero-bg-analyst.jpg');
+        @include bg-image-props();
+    }
+    66.67%, 100% {
+        background-image: url('../../../assets/images/hero-bg-laptop.jpg');
+        @include bg-image-props();
+    }
+  }
+
+
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+
+@media screen and (max-width: 854px) {
+    .hero-container {
+    
+        .hero-container_wrapper {
+            // height: 80vh;
+    
+            h1 {
+                font-size: 4rem;
+                line-height: 76px;
+            }
+        
+            h5 {
+                font-size: 1.1rem;
+            }
+        }
+    
+    }      
+}
+
+
+@media screen and (max-width: 698px) {
+    .hero-container {
+    
+        .hero-container_wrapper {
+            // height: 80vh;
+            padding: .6rem;
+    
+            h1 {
+                font-size: 3rem;
+                line-height: 56px;
+                margin: 0;
+                letter-spacing: 3px;
+                word-spacing: 3px;
+                text-align: center;
+            }
+        
+            h5 {
+                font-size: 1rem;
+                margin: 0;
+                word-spacing: 2px;
+                text-align: center;
+            }
+    
+        }
+    
+    }
+         
+}
+
+@media screen and (max-width: 454px) {
+    .hero-container {
+    
+        .hero-container_wrapper {
+            background: #00060ea8;
+            // height: 70vh;
+            padding: 1.3rem .6rem;
+    
+            h1 {
+                font-size: 3rem;
+                line-height: 56px;
+                margin: 0;
+                letter-spacing: 3px;
+                word-spacing: 3px;
+                text-align: center;
+            }
+        
+            h5 {
+                font-size: 1rem;
+                margin: 0;
+                word-spacing: 2px;
+                text-align: center;
+            }
+    
+            .hero-container_wrapper_buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+    }
+         
+}
+
+@media screen and (max-width: 324px) {
+    .hero-container {
+    
+        .hero-container_wrapper {
+            background: #00060ea8;
+            // height: 75vh;
+            padding: 2rem .5rem;
+    
+            h1 {
+                font-size: 2rem;
+                line-height: 36px;
+                margin: .4rem 0;
+                letter-spacing: 2px;
+                word-spacing: 2px;
+                text-align: center;
+            }
+        
+            h5 {
+                font-size: 1rem;
+                margin: .2rem 0;
+                word-spacing: 2px;
+                text-align: center;
+            }
+    
+            .hero-container_wrapper_buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+    }
+         
+}

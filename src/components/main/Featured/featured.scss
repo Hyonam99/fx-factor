@@ -1,0 +1,174 @@
+@import '../../../style-palette';
+
+.featured-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 3rem  !important;
+    justify-items: center !important;
+    background: #EEEEEE;
+    
+    .featured_section-left {
+
+        article {
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                line-height: 68px;
+                margin: 0;
+                word-spacing: 1px;
+                text-align: left;
+                font-weight: 600;
+                color: $text-dark-grey;
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 0;
+                word-spacing: 1px;
+                text-align: left;
+                color: $text-grey;
+            }
+        }
+
+        .featured_section-left_image-holder {
+            background: #fff;
+            padding: .8rem;
+            border-radius: 8px;
+            margin-top: .5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .featured_section-right {
+        display: flex;
+        flex-direction: column;
+        margin-top: .2rem;
+        align-items: flex-end;
+    }
+
+    .featured_section-right-accordion {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 994px) {
+    .featured-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        padding: 3rem  !important;
+        justify-items: center !important;
+        background: #EEEEEE;
+        
+        .featured_section-left {
+            margin-bottom: 1rem;
+    
+            article {
+    
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 2.2rem;
+                    line-height: 68px;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                    font-weight: 600;
+                    color: $text-dark-grey;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                    color: $text-grey;
+                }
+            }
+    
+            .featured_section-left_image-holder {
+                background: #fff;
+                padding: .8rem;
+                border-radius: 8px;
+                margin-top: .5rem;
+    
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+            }
+        }
+    
+        .featured_section-right {
+            display: none;
+        }
+    
+        .featured_section-right-accordion {
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .featured-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        padding: 2rem .8rem  !important;
+        justify-items: center !important;
+        background: #EEEEEE;
+        
+        .featured_section-left {
+            margin-bottom: 1rem;
+    
+            article {
+    
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 2.2rem;
+                    line-height: 68px;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                    font-weight: 600;
+                    color: $text-dark-grey;
+                }
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    word-spacing: 1px;
+                    text-align: left;
+                    color: $text-grey;
+                }
+            }
+    
+            .featured_section-left_image-holder {
+                background: #fff;
+                padding: .8rem;
+                border-radius: 8px;
+                margin-top: .5rem;
+    
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+            }
+        }
+    
+        .featured_section-right {
+            display: none;
+        }
+    
+        .featured_section-right-accordion {
+            display: block;
+        }
+    }
+}

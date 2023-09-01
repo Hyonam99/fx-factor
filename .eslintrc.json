@@ -32,12 +32,15 @@
         "@typescript-eslint/semi": "off",
         "@typescript-eslint/comma-dangle": "warn",
         "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/explicit-function-return-type": "warn"
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/consistent-type-definitions": "off"
     },
     "settings": {
         "import/resolver": {
             "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "paths": ["src"]
             }
         }
     }
