@@ -1,0 +1,92 @@
+@import '../../../../style-palette';
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+}
+
+.course-detail {
+    padding: 0 0 1rem 0 !important;
+}
+
+.course-detail_container-wrapper {
+    .course-detail_banner {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding: 1rem 4rem;
+        background: $text-dark-grey;
+        color: $text-white;
+
+        .course-detail_rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        article {
+            @include flex-col();
+
+            h2 {
+                margin: 0;
+            }
+
+             p {
+                margin: 0;
+             }
+        }
+    }
+
+    .course-detail_values {
+        padding: 1rem 4rem;
+
+        .course-detail_values-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+
+            .course-detail_values-description,
+            .course-detail_values-content {
+                @include flex-col();
+                padding: 1rem .4rem;
+                margin-bottom: .4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .course-detail_container-wrapper {
+        .course-detail_banner {
+            padding: 1rem 2rem;
+            background: $text-dark-grey;
+            color: $text-white;
+    
+            .course-detail_rating {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    
+        .course-detail_values {
+            padding: 1rem 2rem;
+    
+            .course-detail_values-wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: .4rem;
+    
+                .course-detail_values-description,
+                .course-detail_values-content {
+                    @include flex-col();
+                    padding: 1rem .2rem;
+                    margin-bottom: .2rem;
+                }
+            }
+        }
+    }
+}

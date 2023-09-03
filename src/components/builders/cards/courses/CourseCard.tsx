@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { type CourseCardProps } from "types/interface";
 
 import './course-card.scss';
+import { Link } from "react-router-dom";
 
 const CourseCard = (props: CourseCardProps) => {
     const { courseItem } = props
@@ -29,7 +30,7 @@ const CourseCard = (props: CourseCardProps) => {
                     </Typography>
                 </CardContent>
                 <CardActions className="card-button-action">
-                    <Button>Learn More</Button>
+                    <Link to={`/courses/${courseItem.id as string}`}><Button>Learn More</Button></Link>
                 </CardActions>
             </Card>
         </>

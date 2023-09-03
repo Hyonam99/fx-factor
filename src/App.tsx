@@ -12,7 +12,7 @@ const App = (): React.JSX.Element => {
                 <Route path='/' element={<UserLayout><HomePage /></UserLayout>} />
                 <Route path='/about' element={<UserLayout><AboutPage /></UserLayout>} />
                 <Route path='/courses' element={<UserLayout><CoursesPage /></UserLayout>} />
-                <Route path='/courses:courseId' element={<UserLayout><CourseDetailPage /></UserLayout>} />
+                <Route path='/courses/:courseId' element={<UserLayout><CourseDetailPage /></UserLayout>} />
                 <Route path='/checkout' element={<UserLayout><CheckoutPage /></UserLayout>} />
                 <Route path='/account' element={<UserLayout><UserDashboard /></UserLayout>} />
                 <Route path='/faq' element={<UserLayout><FAQ /></UserLayout>} />

@@ -13,6 +13,7 @@ import CourseCard from "./builders/cards/courses/CourseCard";
 import ValuesCard from './builders/cards/values/ValuesCard';
 import CustomAccordion from "./builders/accordion/Accordion";
 import InputField from './builders/input-field/InputField'
+import CourseDetail from './main/courses/course-detail/CourseDetail'
 
 export {
     CustomButton,
@@ -29,5 +30,6 @@ export {
     CourseCard,
     CustomAccordion,
     InputField,
-    ValuesCard
+    ValuesCard,
+    CourseDetail
 };
