@@ -8,6 +8,10 @@ nav {
     background: $bg-dark;
     color: $text-white;
 
+    .nav-logo {
+        flex: .3;
+    }
+
     ul {
         flex: .5;
         list-style: none;
@@ -35,6 +39,14 @@ nav {
         }
     }
 
+    .nav-avatar {
+        flex: .1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .7rem;
+    }
+
     .mobile-toggle-btn {
         display: none;
     }
@@ -48,9 +60,21 @@ nav {
         padding: .8rem 2rem;
         background: $bg-dark;
         color: $text-white;
+
+        .nav-logo {
+            flex: .7;
+        }
     
         ul {
             display: none;
+        }
+
+        .nav-avatar {
+            flex: .2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .7rem;
         }
 
         .mobile-toggle-btn {
@@ -63,8 +87,24 @@ nav {
 
 .mobile-nav-links {
     color: $text-dark !important;
+    overflow: hidden !important;
 
     a {
         color: $text-dark !important;
+    }
+
+    ul {
+        margin-top: 4rem;
+        width: 96.5vw;
+        padding: 0 !important;
+        li {
+            list-style-type: none;
+            
+            a {
+                display: block;
+                padding: .6rem;
+                margin-bottom: .4rem;
+            }
+        }
     }
 }

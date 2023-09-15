@@ -2,12 +2,13 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import { CourseCard } from "components/components-exports";
 import { type CoursesProps } from "types/interface";
-import { demoCourse } from "mocked-data/mocked-data";
+import { renderDemoCourses } from "mocked-data/mocked-data";
 
 import './courses.scss';
 
 const Courses = (props: CoursesProps) => {
     const { limit } = props
+    const demoCourse = renderDemoCourses()
     return (
         <Container maxWidth={false} className="courses-container">
             <Box className="courses-container_wrapper">
@@ -16,7 +17,7 @@ const Courses = (props: CoursesProps) => {
             </Box>
             <Box className="courses-list">
                 <Box className="courses-list_wrapper">
-                    {demoCourse.slice(0, limit).map((course) => (
+                    {demoCourse.data.slice(0, limit).map((course) => (
                         <CourseCard key={course.courseTitle} courseItem={course}/>
                     ))}
                 </Box>

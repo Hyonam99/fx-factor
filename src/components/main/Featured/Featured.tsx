@@ -2,11 +2,12 @@ import React from "react";
 import { Box, Container, Grid, Avatar, Typography } from "@mui/material";
 import MiniCard from "components/builders/cards/mini-info/MiniCard";
 import { CustomAccordion } from "components/components-exports";
-import { demoCourse } from "mocked-data/mocked-data";
+import { renderDemoCourses } from "mocked-data/mocked-data";
 
 import './featured.scss';
 
 const Featured = () => {
+    const demoCourse = renderDemoCourses()
     return (
         <Container maxWidth={false} className="featured-container">
             <Box className="featured_section-left">
@@ -25,12 +26,12 @@ const Featured = () => {
                 </div>
             </Box>
             <Box className="featured_section-right">
-                {demoCourse.map((item) => (
+                {demoCourse.data.map((item) => (
                     <MiniCard key={item.courseTitle} cardDetails={item.courseDescription} cardTitle={item.courseTitle}/>
                 ))}
             </Box>
             <Box className="featured_section-right-accordion">
-                {demoCourse.map((feature, i) => (
+                {demoCourse.data.map((feature, i) => (
                     <CustomAccordion
                         key={feature.courseTitle}
                         title={feature.courseTitle}

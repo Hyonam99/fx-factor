@@ -1,0 +1,24 @@
+@import '../../../style-palette';
+
+.checkout-container {
+    padding: 0 !important;
+
+    .checkout-container_wrapper {
+        .checkout-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.cart-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .cart-content_product {
+        display: flex;
+        align-items: first baseline;
+    }
+}

@@ -1,4 +1,4 @@
-import { type CourseItem } from "./types"
+import { type CourseItemType } from "./types"
 
 export interface Forex {
     currency: string
@@ -11,7 +11,7 @@ export interface CoursesProps {
 }
 
 export interface CourseCardProps {
-    courseItem: CourseItem
+    courseItem: CourseItemType
 }
 
 export interface MiniCardProps {

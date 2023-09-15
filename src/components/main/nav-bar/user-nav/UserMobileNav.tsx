@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Box, Drawer, Button, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import React, { useState, useEffect } from 'react';
+import { Box, Drawer, Button } from "@mui/material";
 import { FiMenu } from 'react-icons/fi';
 import { RxCross2 } from 'react-icons/rx';
 import { Link } from "react-router-dom";
@@ -10,13 +10,31 @@ import './user-nav.scss';
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const UserMobileNav = () => {
-    const [state, setState] = React.useState({
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    // Create a function to update the window width state
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    // Add an event listener for the window resize event when the component mounts
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup: Remove the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const [state, setState] = useState({
         top: false,
         left: false,
         bottom: false,
         right: false
     });
 
+    useEffect(() => { if (windowWidth > 769) { setState({ ...state, top: false }) } }, [windowWidth])
     const toggleDrawer
     = (anchor: Anchor, open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -37,35 +55,33 @@ const UserMobileNav = () => {
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
+            className='mobile-nav-links'
         >
-            <List>
+            <ul>
+
                 {Links.map((link) => (
-                    <ListItem key={link.linkName} disablePadding={false} className='mobile-nav-links'>
-                        <Link to={link.linkUrl}>
-                            <ListItemButton>
-                                <ListItemText primary={link.linkName} color='black'/>
-                            </ListItemButton>
-                        </Link>
-                    </ListItem>
+                    <li key={link.linkName}>
+                        <Link to={link.linkUrl}>{link.linkName}</Link>
+                    </li>
                 ))}
-            </List>
+
+            </ul>
         </Box>
     );
 
     return (
         <div>
-            <React.Fragment>
-                <Button onClick={toggleDrawer('top', !state.top)}>
-                    { !state.top ? <FiMenu size={26} color='white'/> : <RxCross2 size={26} color='white'/> }
-                </Button>
-                <Drawer
-                    anchor={'top'}
-                    open={state.top}
-                    onClose={toggleDrawer('top', false)}
-                >
-                    {list('top')}
-                </Drawer>
-            </React.Fragment>
+            <Button onClick={toggleDrawer('top', !state.top)}>
+                { !state.top ? <FiMenu size={26} color='white'/> : <RxCross2 size={26} color='white'/> }
+            </Button>
+            <Drawer
+                anchor={'top'}
+                open={state.top}
+                onClose={toggleDrawer('top', false)}
+                className='custom-drawer'
+            >
+                {list('top')}
+            </Drawer>
         </div>
     );
 }

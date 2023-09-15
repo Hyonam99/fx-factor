@@ -5,13 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from 'utils/themes'
+import CartProvider from 'contexts/CourseCart'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Element | DocumentFragment);
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider theme={theme}>
-                <App />
+                <CartProvider>
+                    <App />
+                </CartProvider>
             </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>

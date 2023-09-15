@@ -14,6 +14,7 @@ import ValuesCard from './builders/cards/values/ValuesCard';
 import CustomAccordion from "./builders/accordion/Accordion";
 import InputField from './builders/input-field/InputField'
 import CourseDetail from './main/courses/course-detail/CourseDetail'
+import CheckOut from "./main/checkout/CheckOut";
 
 export {
     CustomButton,
@@ -31,5 +32,6 @@ export {
     CustomAccordion,
     InputField,
     ValuesCard,
-    CourseDetail
+    CourseDetail,
+    CheckOut
 };
