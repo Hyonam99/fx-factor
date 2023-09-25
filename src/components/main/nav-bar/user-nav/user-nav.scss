@@ -10,6 +10,17 @@ nav {
 
     .nav-logo {
         flex: .3;
+
+        a {
+            .logo-full {
+                height: 40px;
+                scale: .7;
+            }
+
+            .logo-short {
+                display: none;
+            }
+        }
     }
 
     ul {
@@ -63,6 +74,7 @@ nav {
 
         .nav-logo {
             flex: .7;
+
         }
     
         ul {
@@ -85,6 +97,30 @@ nav {
     }
 }
 
+@media screen and (max-width: 596px) {
+
+    nav {
+    
+        .nav-logo {
+            flex: .3;
+    
+            a {
+                .logo-full {
+                    display: none;
+                }
+    
+                .logo-short {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    scale: .7;
+                }
+            }
+        }
+    
+    }
+    
+}
 .mobile-nav-links {
     color: $text-dark !important;
     overflow: hidden !important;

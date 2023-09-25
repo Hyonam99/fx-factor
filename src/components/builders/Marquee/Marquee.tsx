@@ -13,8 +13,8 @@ const Marquee = () => {
     return (
         <section className="marquee-slider-container">
             <div className="marquee-slide-track-left">
-                {demo.map((item: any) => (
-                    <div className="marquee-slide" key={item}>
+                {demo.map((item: any, i: number) => (
+                    <div className="marquee-slide" key={`currency-${i + 1}`}>
                         <div>
                             <h3>EUR/USD</h3>
                             <p>1.01245</p>

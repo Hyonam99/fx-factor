@@ -3,9 +3,10 @@ import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import { FaTwitter, FaFacebook } from 'react-icons/fa';
 import { RiWhatsappFill } from 'react-icons/ri';
-import './footer.scss';
 import { Box } from "@mui/material";
 import { CustomButton, InputField } from "components/components-exports";
+import LogoShort from "assets/images/logo-short-clipped.png"
+import './footer.scss';
 
 const Footer = () => {
 
@@ -52,7 +53,9 @@ const Footer = () => {
                 </form>
             </section>
             <section className="footer_signature">
-                <h2>FX</h2>
+                <Box>
+                    <img src={LogoShort} alt='fx-factor-logo' className='footer_logo-short'/>
+                </Box>
                 <p>copy right 2023 fx factor</p>
                 <div className="footer_media">
                     <span className="footer_social-media_icons"><FaFacebook /></span>

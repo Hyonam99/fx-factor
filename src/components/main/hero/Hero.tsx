@@ -15,7 +15,7 @@ const Hero = (): React.JSX.Element => {
                 </h5>
                 <Box className="hero-container_wrapper_buttons">
                     <CustomButton title='Get A Course' size='large' color="primary"/>
-                    <CustomButton title='Join Us' size='large' color="secondary" outlined/>
+                    <CustomButton title='Join Us' size='large' color="primary" outlined/>
                 </Box>
             </Box>
         </Container>

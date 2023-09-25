@@ -9,14 +9,14 @@
             background: $primary-color;
             color: $text-white;
             border-radius: 4px !important;
-    
+            
             &:hover,
             &:active,
             &:focus {
+                background: $primary-color-dark;
                 color: $text-white;
             }
         }
-    }
-    
+    }  
 
 }

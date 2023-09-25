@@ -1,8 +1,12 @@
 export type CourseItemType = {
     id?: string
     courseImage: string | undefined
+    courseIntro?: string
     courseTitle: string
     courseDescription: string
+    courseHighlights?: string[]
+    courseUsp?: string[]
+    courseOutro?: string
     coursePrice?: number
     rating?: number
     quantity?: number
@@ -34,4 +38,14 @@ export type ForexPricePairs = {
     tm: string // "2023-09-14 18:15:39" -When update last time (UTC)
     a: string // "3.674465" - Ask
     b: string // "3.671711" - Bid
+}
+
+export type GistContentResponse = {
+    content: string
+    filename: string
+    language: string
+    raw_url: string
+    size: number
+    truncated: boolean
+    type: string
 }

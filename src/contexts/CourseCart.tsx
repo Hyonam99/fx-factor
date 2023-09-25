@@ -1,12 +1,14 @@
 import React, { createContext, useState, useEffect } from "react";
 import { type CourseItemType } from "../types/types";
 
+// Use Redux for this
+
 export const CartContext = createContext<any>(null);
 
 const CartProvider: React.FC<{ children: React.ReactNode }> = ({
     children
 }) => {
-    const [cart, setCart] = useState<CourseItemType[]>([]);
+    const [cart, setCart] = useState<CourseItemType[]>(JSON.parse(localStorage.getItem("courseCart") as string) ?? []);
     const [itemQuantity, setItemQuantity] = useState(0);
     const [total, setTotal] = useState(0);
 
@@ -29,7 +31,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({
 
     useEffect(() => {
         // Save the value to localStorage whenever it changes
-        // localStorage.setItem('courseCart', cart);
+        localStorage.setItem('courseCart', JSON.stringify(cart));
     }, [cart]);
 
     const addToCart = (product: CourseItemType) => {
@@ -50,42 +52,6 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({
         setCart([]);
     };
 
-    const incrementQuantity = (id: string) => {
-        const cartItem = cart.find((item) => item.id === id);
-
-        if (cartItem !== null && cartItem !== undefined) {
-            const newCart = [...cart].map((item) => {
-                if (item.id === id) {
-                    return { ...item, quantity: Number(cartItem.quantity) + 1 };
-                } else {
-                    return item;
-                }
-            });
-
-            setCart(newCart);
-        }
-
-    };
-
-    const decrementQuantity = (id: string) => {
-        const cartItem = cart.find((item) => item.id === id) as CourseItemType;
-
-        if (cartItem !== null && cartItem !== undefined) {
-            const newCart = cart.map((item) => {
-                if (item.id === id) {
-                    return { ...item, quantity: Number(cartItem.quantity) - 1 };
-                } else {
-                    return item;
-                }
-            });
-            setCart(newCart);
-        }
-
-        if (Number(cartItem?.quantity) < 2) {
-            removeFromCart(id);
-        }
-    };
-
     return (
         <CartContext.Provider
             value={{
@@ -93,8 +59,6 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({
                 itemQuantity,
                 total,
                 clearCart,
-                incrementQuantity,
-                decrementQuantity,
                 removeFromCart,
                 addToCart
             }}

@@ -17,16 +17,16 @@ const CourseCard = (props: CourseCardProps) => {
             <Card sx={{ width: 300 }}>
                 <CardMedia
                     component="img"
-                    alt="green iguana"
+                    alt="forex"
                     height="140"
                     image={courseItem.courseImage}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div">
                         {courseItem.courseTitle}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {courseItem.courseDescription}
+                    <Typography variant="body2" color="text.secondary" minHeight="160.9px">
+                        {courseItem.courseIntro}
                     </Typography>
                 </CardContent>
                 <CardActions className="card-button-action">
