@@ -5,7 +5,7 @@ export const Links = [
     { linkName: 'Home', linkUrl: '/' },
     { linkName: 'Courses', linkUrl: '/courses' },
     { linkName: 'About', linkUrl: '/about' },
-    { linkName: 'FAQ', linkUrl: '/faq' }
+    { linkName: 'Faq', linkUrl: '/faq' }
 ];
 
 const demoFaq = (): FAQType => {

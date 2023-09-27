@@ -1,4 +1,4 @@
-import { getLatestPrice, getGist } from 'api/services/forexService';
+import { getLatestPrice, getGist, getCurrencyDetails } from 'api/services/forexService';
 import { useState } from 'react';
 
 // Implement react-query for this
@@ -37,6 +37,27 @@ export const useGetLatestPrice = () => {
             getLatestPrice()
                 .then(res => { setData(res); setIsLoading(false); setIsSuccess(true); setError(null) })
                 .catch(err => { setError(err.response.data); setIsLoading(false); setIsSuccess(false); setData(null) })
+        },
+        data,
+        isLoading,
+        error,
+        isSuccess
+    }
+}
+
+export const useGetCurrencyDetails = () => {
+
+    const [data, setData] = useState<any>(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState(null);
+
+    return {
+        call: () => {
+            setIsLoading(true)
+            getCurrencyDetails()
+                .then(res => { setData(res); setIsLoading(false); setIsSuccess(true); setError(null) })
+                .catch(err => { setError(err); setIsLoading(false); setIsSuccess(false); setData(null) })
         },
         data,
         isLoading,

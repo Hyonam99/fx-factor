@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TableSortLabel } from "@mui/material";
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -9,6 +9,7 @@ import Tooltip from '@mui/material/Tooltip';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import './market-price.scss';
+import { useNavigate } from "react-router-dom";
 
 const MarketPricing = (): React.JSX.Element => {
 
@@ -180,13 +181,14 @@ function EnhancedTableHead (props: EnhancedTableProps) {
 
     return (
         <TableHead>
-            <TableRow>
+            <TableRow className="price-table-head-row">
                 {headCells.map((headCell) => (
                     <TableCell
                         key={headCell.id}
                         align={headCell.numeric ? 'right' : 'left'}
                         padding={headCell.disablePadding ? 'none' : 'normal'}
                         sortDirection={orderBy === headCell.id ? order : false}
+                        className="price-table-head-cell"
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}
@@ -240,11 +242,11 @@ function EnhancedTableToolbar () {
 }
 
 function EnhancedTable () {
-    const [order, setOrder] = React.useState<Order>('asc');
-    const [orderBy, setOrderBy] = React.useState<keyof Data>('price');
-    const [selected, setSelected] = React.useState<readonly string[]>([]);
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [order, setOrder] = useState<Order>('asc');
+    const [orderBy, setOrderBy] = useState<keyof Data>('price');
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+    const navigate = useNavigate()
 
     const handleRequestSort = (
         event: React.MouseEvent<unknown>,
@@ -256,23 +258,7 @@ function EnhancedTable () {
     };
 
     const handleClick = (event: React.MouseEvent<unknown>, name: string) => {
-        const selectedIndex = selected.indexOf(name);
-        let newSelected: readonly string[] = [];
-
-        if (selectedIndex === -1) {
-            newSelected = newSelected.concat(selected, name);
-        } else if (selectedIndex === 0) {
-            newSelected = newSelected.concat(selected.slice(1));
-        } else if (selectedIndex === selected.length - 1) {
-            newSelected = newSelected.concat(selected.slice(0, -1));
-        } else if (selectedIndex > 0) {
-            newSelected = newSelected.concat(
-                selected.slice(0, selectedIndex),
-                selected.slice(selectedIndex + 1)
-            );
-        }
-
-        setSelected(newSelected);
+        navigate(`/currency-details/${name}`)
     };
 
     const handleChangePage = (event: unknown, newPage: number) => {
@@ -298,8 +284,8 @@ function EnhancedTable () {
     );
 
     return (
-        <Box sx={{ width: '100%' }}>
-            <Paper sx={{ width: '100%', mb: 2 }}>
+        <Box sx={{ width: '100%' }} className="market-pricing_enhanced-table">
+            <Paper sx={{ width: '100%', mb: 2 }} className="market-pricing_enhanced-table_wrapper">
                 <EnhancedTableToolbar />
                 <TableContainer>
                     <Table
@@ -319,11 +305,11 @@ function EnhancedTable () {
                                 return (
                                     <TableRow
                                         hover
-                                        onClick={(event) => { handleClick(event, row.name); }}
-                                        role="checkbox"
+                                        onClick={(event) => { handleClick(event, row.name.replace("/", "-")); }}
                                         tabIndex={-1}
                                         key={row.name}
                                         sx={{ cursor: 'pointer' }}
+                                        className="price-table-row"
                                     >
                                         <TableCell
                                             component="th"

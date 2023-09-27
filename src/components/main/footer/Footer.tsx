@@ -11,7 +11,7 @@ import './footer.scss';
 const Footer = () => {
 
     const newsLetterSchema = Yup.object().shape({
-        email: Yup.string().required('Subject name is required')
+        email: Yup.string().required('email address is required').email('invalid email format')
     })
 
     const formik = useFormik({
@@ -44,8 +44,8 @@ const Footer = () => {
                             variant="filled"
                             size='small'
                             margin='none'
-                            // error={true}
-                            helperText="Incorrect email."
+                            error={formik.errors.email !== undefined}
+                            helperText={formik.errors.email}
                             className="subscribe-input"
                         />
                         <CustomButton title="Subscribe" type='submit' color="primary" size="large"/>

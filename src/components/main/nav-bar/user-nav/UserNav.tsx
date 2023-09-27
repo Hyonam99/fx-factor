@@ -33,7 +33,7 @@ const UserNav = () => {
                 </ul>
                 <div className="nav-avatar">
                     <Avatar
-                        alt="Fx"
+                        alt="Fx-user"
                         src={defaultImage}
                         sx={{ width: 24, height: 24 }}
                     />

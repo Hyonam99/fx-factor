@@ -69,8 +69,20 @@
 
         .market-price-container_table {
             padding: .8rem;
+
         }
     
     }
 }
   
+.price-table-head-row {
+    .price-table-head-cell:nth-child(1) {
+        padding-left: 8px;
+    }
+}
+.price-table-row {
+
+    th {
+        padding-left: 8px;
+    }
+}

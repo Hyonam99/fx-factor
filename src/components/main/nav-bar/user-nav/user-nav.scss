@@ -102,7 +102,6 @@ nav {
     nav {
     
         .nav-logo {
-            flex: .3;
     
             a {
                 .logo-full {
@@ -117,10 +116,15 @@ nav {
                 }
             }
         }
+
+        .nav-avatar {
+            gap: 1.8rem;
+        }
     
     }
     
 }
+
 .mobile-nav-links {
     color: $text-dark !important;
     overflow: hidden !important;

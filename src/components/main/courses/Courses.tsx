@@ -4,6 +4,7 @@ import { CourseCard } from "components/components-exports";
 import { type CoursesProps } from "types/interface";
 import { useGetCourseContent } from "api/hooks/forexHook";
 import { type GistContentResponse, type CourseItemType } from "types/types";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import './courses.scss';
 
 const Courses = (props: CoursesProps) => {
@@ -29,6 +30,7 @@ const Courses = (props: CoursesProps) => {
                 <h1>Creatives Forex Certificate Program</h1>
                 <h5>Unlock your creative potential with our<br /> specialized Certificate Program for Forex<br /> Traders.</h5>
             </Box>
+            <Box className="courses-indicator"><BsArrowLeft size={18}/> swipe to view more <BsArrowRight size={18} /> </Box>
             <Box className="courses-list">
                 <Box className="courses-list_wrapper">
                     {courses?.slice(0, limit).map((course) => (

@@ -42,16 +42,19 @@
             padding: 1rem;
             gap: 1.2rem;
 
-            button:nth-child(2) {
-                color: $text-white;
-                border: 2px solid #087216;
-
-                &:hover,
-                &:focus{
-                    background: $primary-color-dark;
-                    opacity: .8;
+            a:nth-child(2) {
+                button {
+                    color: $text-white;
+                    border: 2px solid #087216;
+    
+                    &:hover,
+                    &:focus{
+                        background: $primary-color-dark;
+                        opacity: .8;
+                    }
                 }
             }
+
         }
     }
 
@@ -114,8 +117,8 @@
     .hero-container {
     
         .hero-container_wrapper {
-            // height: 80vh;
-            padding: .6rem;
+            height: fit-content;
+            padding: 3.4rem .6rem !important;
     
             h1 {
                 font-size: 3rem;
@@ -144,8 +147,7 @@
     
         .hero-container_wrapper {
             background: #00060ea8;
-            height: 93vh;
-            padding: 1.3rem .6rem;
+            height: fit-content;
     
             h1 {
                 font-size: 3rem;
@@ -177,7 +179,6 @@
     
         .hero-container_wrapper {
             background: #00060ea8;
-            // height: 75vh;
             padding: 2rem .5rem;
     
             h1 {

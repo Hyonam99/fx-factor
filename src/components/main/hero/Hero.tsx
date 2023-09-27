@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import { CustomButton } from 'components/components-exports'
 import './hero.scss'
+import { Link } from "react-router-dom";
 
 const Hero = (): React.JSX.Element => {
     return (
@@ -14,8 +15,12 @@ const Hero = (): React.JSX.Element => {
                 Join our community & unlock profitable insights with The FX Factor.
                 </h5>
                 <Box className="hero-container_wrapper_buttons">
-                    <CustomButton title='Get A Course' size='large' color="primary"/>
-                    <CustomButton title='Join Us' size='large' color="primary" outlined/>
+                    <Link to='/courses'>
+                        <CustomButton title='Get A Course' size='large' color="primary"/>
+                    </Link>
+                    <Link to='#'>
+                        <CustomButton title='Join Us' size='large' color="primary" outlined/>
+                    </Link>
                 </Box>
             </Box>
         </Container>

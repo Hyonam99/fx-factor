@@ -32,13 +32,21 @@
         }
     }
 
+    .courses-indicator {
+        display: none;
+    }
+
     .courses-list {
-        padding: 1rem;
+        padding: 1rem 2rem;
         display: block;
         overflow-x: scroll;
         overflow-y: hidden;
         width: 90%;
         margin: 0 auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .courses-list_wrapper {
             display: grid;
@@ -47,6 +55,7 @@
             justify-items: center;
             gap: 1.8rem;
         }
+
     }
 }
   
@@ -54,6 +63,15 @@
     .courses-container {
         padding: 0 !important; 
         margin-bottom: 1rem !important;
+
+        .courses-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+            font-size: small;
+            font-style: italic;
+        }
     
         .courses-container_wrapper {
             display: flex;
