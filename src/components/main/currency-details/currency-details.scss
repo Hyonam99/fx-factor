@@ -8,8 +8,10 @@
         padding: 1rem 3rem;
     }
 }
+
 .currency_info {
     border-radius: 8px;
+    margin-bottom: 12px;
     article {
         padding: .3rem .8rem;
         background: $text-white;
@@ -41,6 +43,24 @@
         .currency_info_sub-details {
             flex: 1 1 178px;
 
+        }
+    }
+}
+
+@media screen and (max-width: 856px) {
+    .currency-container {
+    
+        .currency-container_wrapper {
+            padding: 1rem 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .currency-container {
+    
+        .currency-container_wrapper {
+            padding: 1rem .5rem;
         }
     }
 }

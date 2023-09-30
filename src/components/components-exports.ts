@@ -17,6 +17,7 @@ import CourseDetail from './main/courses/course-detail/CourseDetail'
 import CheckOut from "./main/checkout/CheckOut";
 import CurrencyDetails from "./main/currency-details/CurrencyDetails";
 import ChartComponent from "./builders/charts/CandleChart";
+import AChart from "./builders/charts/AChart";
 
 export {
     CustomButton,
@@ -37,5 +38,6 @@ export {
     CourseDetail,
     CheckOut,
     CurrencyDetails,
-    ChartComponent
+    ChartComponent,
+    AChart
 };

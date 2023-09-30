@@ -32,7 +32,10 @@ const ChartComponent = (props: any) => {
                     horzLines: { color: '#444' }
                 },
                 width: chartContainerRef.current.clientWidth,
-                height: 360
+                height: 360,
+                handleScale: false,
+                handleScroll: { vertTouchDrag: false },
+                rightPriceScale: { autoScale: false }
             });
             chart.timeScale().fitContent();
             chart.priceScale("right").applyOptions({
@@ -91,6 +94,7 @@ const ChartComponent = (props: any) => {
 
     return (
         <div
+            className='candle-chart-container'
             ref={chartContainerRef}
         />
     );
