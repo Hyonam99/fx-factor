@@ -16,6 +16,7 @@ import InputField from './builders/input-field/InputField'
 import CourseDetail from './main/courses/course-detail/CourseDetail'
 import CheckOut from "./main/checkout/CheckOut";
 import CurrencyDetails from "./main/currency-details/CurrencyDetails";
+import ChartComponent from "./builders/charts/CandleChart";
 
 export {
     CustomButton,
@@ -35,5 +36,6 @@ export {
     ValuesCard,
     CourseDetail,
     CheckOut,
-    CurrencyDetails
+    CurrencyDetails,
+    ChartComponent
 };
