@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Container } from "@mui/material";
-// import { useGetCurrencyDetails } from "api/hooks/forexHook";
-import { sampleForexData } from 'mocked-data/mocked-data';
+import { useGetCurrencyHistory } from "api/hooks/forexHook";
+// import { sampleForexData } from 'mocked-data/mocked-data';
 import './currency-details.scss'
-import { ChartComponent } from "components/components-exports";
+import { ChartComponent, AChart } from "components/components-exports";
+import { type HistoryResponse, type ChartDataSet } from "types/types";
 
 const CurrencyDetails = () => {
 
     // const getCurrencyData = useGetCurrencyDetails()
+    const getCurrencyHistory = useGetCurrencyHistory()
+    const [chartData, setChartData] = useState<ChartDataSet[]>([])
 
     // useEffect(() => {
     //     // getCurrencyData.call()
     // }, [])
-    // console.log(getCurrencyData)
+    useEffect(() => {
+        // getCurrencyHistory.call()
+    }, [])
+    // console.log(getCurrencyData, "getCurrencyData")
 
     // useEffect(() => {
     //     if (getCurrencyData.data !== undefined && getCurrencyData.data !== null) {
     //     }
     // }, [getCurrencyData.data])
+
+    useEffect(() => {
+        if (getCurrencyHistory.data !== undefined && getCurrencyHistory.data !== null) {
+            const apiResponse = Object.values(getCurrencyHistory.data?.response) as [HistoryResponse]
+            const compareDateObjects = (a: ChartDataSet, b: ChartDataSet): number => {
+                return new Date(a.time).getTime() - new Date(b.time).getTime();
+            }
+            const chartApiData = apiResponse.map((item) => ({
+                time: item.t,
+                open: Number(item.o),
+                high: Number(item.h),
+                low: Number(item.l),
+                close: Number(item.c)
+            })).sort(compareDateObjects)
+            setChartData(chartApiData)
+        }
+    }, [getCurrencyHistory.data])
 
     return (
         <Container maxWidth={false} className="currency-container">
@@ -45,8 +68,9 @@ const CurrencyDetails = () => {
                 </Box>
                 <Box className="currency_price-chart">
                     <Box>
-                        <ChartComponent data={sampleForexData}></ChartComponent>
+                        {/* <ChartComponent data={chartData}></ChartComponent> */}
                     </Box>
+                    <AChart />
                 </Box>
                 <Box className="currency_pivots">
                     <Box>pivots pie </Box>

@@ -30,7 +30,7 @@ const CourseCard = (props: CourseCardProps) => {
                     </Typography>
                 </CardContent>
                 <CardActions className="card-button-action">
-                    <Link to={`/courses/${courseItem.id as string}`}><Button>Learn More</Button></Link>
+                    <Link to={`/courses/${courseItem.id as string}/?csn=${courseItem.courseTitle.toLowerCase()}`}><Button>Learn More</Button></Link>
                 </CardActions>
             </Card>
         </>

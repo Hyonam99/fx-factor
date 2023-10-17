@@ -1,17 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import UserMobileNav from "./UserMobileNav";
 import { Links } from "mocked-data/mocked-data";
-import { Avatar, Badge } from "@mui/material";
-import { ShoppingCart } from '@mui/icons-material';
-import { CartContext } from "contexts/CourseCart";
 import './user-nav.scss';
 import logo from "assets/images/logo-dark-clipped.png";
 import LogoShort from "assets/images/logo-short-clipped.png"
-import defaultImage from "assets/images/blank-profile-picture.png"
 
 const UserNav = () => {
-    const { itemQuantity } = useContext(CartContext)
 
     return (
         <>
@@ -31,18 +26,6 @@ const UserNav = () => {
                     ))}
 
                 </ul>
-                <div className="nav-avatar">
-                    <Avatar
-                        alt="Fx-user"
-                        src={defaultImage}
-                        sx={{ width: 24, height: 24 }}
-                    />
-                    <Link to='/checkout'>
-                        <Badge badgeContent={itemQuantity} color="primary">
-                            <ShoppingCart htmlColor="white" />
-                        </Badge>
-                    </Link>
-                </div>
                 <div className="mobile-toggle-btn">
                     <UserMobileNav />
                 </div>

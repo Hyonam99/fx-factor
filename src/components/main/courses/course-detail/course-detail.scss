@@ -36,7 +36,15 @@
 
              p {
                 margin: 0;
-             }
+            }
+
+            a {
+                width: 60%;
+                button {
+                    width: 100%;
+                }
+            }
+
         }
     }
 
@@ -114,6 +122,24 @@
                     padding: 1rem .2rem;
                     margin-bottom: .2rem;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 564px) {
+    .course-detail_container-wrapper {
+        .course-detail_banner {
+    
+            article {
+    
+                a {
+                    width: 100%;
+                    button {
+                        width: 100%;
+                    }
+                }
+    
             }
         }
     }

@@ -1,8 +1,7 @@
 import React from "react";
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
-import { FaTwitter, FaFacebook } from 'react-icons/fa';
-import { RiWhatsappFill } from 'react-icons/ri';
+import { FaTwitter, FaTelegram } from 'react-icons/fa';
 import { Box } from "@mui/material";
 import { CustomButton, InputField } from "components/components-exports";
 import LogoShort from "assets/images/logo-short-clipped.png"
@@ -58,9 +57,8 @@ const Footer = () => {
                 </Box>
                 <p>copy right 2023 fx factor</p>
                 <div className="footer_media">
-                    <span className="footer_social-media_icons"><FaFacebook /></span>
                     <span className="footer_social-media_icons"><FaTwitter /></span>
-                    <span className="footer_social-media_icons"><RiWhatsappFill /></span>
+                    <span className="footer_social-media_icons"><FaTelegram /></span>
                 </div>
             </section>
         </section>

@@ -15,6 +15,7 @@ const ChartComponent = (props: any) => {
     } = props;
 
     const chartContainerRef = useRef<any>();
+    const isMobile = window.innerWidth < 700
 
     useEffect(
         () => {
@@ -31,19 +32,20 @@ const ChartComponent = (props: any) => {
                     vertLines: { color: '#444' },
                     horzLines: { color: '#444' }
                 },
-                width: chartContainerRef.current.clientWidth,
-                height: 360,
-                handleScale: false,
+                height: isMobile ? 580 : 480,
+                handleScale: { mouseWheel: false, axisPressedMouseMove: false, axisDoubleClickReset: false },
                 handleScroll: { vertTouchDrag: false },
-                rightPriceScale: { autoScale: false }
+                rightPriceScale: { autoScale: true }
+                // localization: { timeFormatter: {} }
             });
-            chart.timeScale().fitContent();
+            // chart.timeScale().fitContent();
             chart.priceScale("right").applyOptions({
                 borderColor: '#71649C'
             });
             // Setting the border color for the horizontal axis
             chart.timeScale().applyOptions({
-                borderColor: '#71649C'
+                borderColor: '#71649C',
+                barSpacing: 10
             });
 
             // const newSeries = chart.addAreaSeries({ lineColor, topColor: areaTopColor, bottomColor: areaBottomColor });

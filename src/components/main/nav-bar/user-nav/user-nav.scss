@@ -50,14 +50,6 @@ nav {
         }
     }
 
-    .nav-avatar {
-        flex: .1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: .7rem;
-    }
-
     .mobile-toggle-btn {
         display: none;
     }
@@ -79,14 +71,6 @@ nav {
     
         ul {
             display: none;
-        }
-
-        .nav-avatar {
-            flex: .2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: .7rem;
         }
 
         .mobile-toggle-btn {
@@ -115,10 +99,6 @@ nav {
                     scale: .7;
                 }
             }
-        }
-
-        .nav-avatar {
-            gap: 1.8rem;
         }
     
     }

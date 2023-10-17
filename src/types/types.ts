@@ -9,8 +9,6 @@ export type CourseItemType = {
     courseOutro?: string
     coursePrice?: number
     rating?: number
-    quantity?: number
-    isAdded?: boolean
 };
 
 export type FAQType = {
@@ -38,6 +36,24 @@ export type ForexPricePairs = {
     tm: string // "2023-09-14 18:15:39" -When update last time (UTC)
     a: string // "3.674465" - Ask
     b: string // "3.671711" - Bid
+}
+
+export type HistoryResponse = {
+    c: string // "1.06384" - close, Current price
+    h: string // "1.07532" - high
+    l: string // "1.06316" - low
+    o: string // "1.07273" - open
+    t: number // "1694715339" - Time Unix Format (UTC)
+    tm: string // "2023-09-14 18:15:39" - Date time (UTC)
+    v: string // "" - empty
+}
+
+export type ChartDataSet = {
+    close: number // "1.06384" - close, Current price
+    high: number // "1.07532" - high
+    low: number // "1.06316" - low
+    open: number // "1.07273" - open
+    time: number // "1694715339" - Time Unix Format (UTC)
 }
 
 export type GistContentResponse = {
