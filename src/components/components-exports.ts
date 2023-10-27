@@ -15,7 +15,6 @@ import CustomAccordion from "./builders/accordion/Accordion";
 import InputField from './builders/input-field/InputField'
 import CourseDetail from './main/courses/course-detail/CourseDetail'
 import CurrencyDetails from "./main/currency-details/CurrencyDetails";
-import ChartComponent from "./builders/charts/CandleChart";
 import AChart from "./builders/charts/AChart";
 
 export {
@@ -36,6 +35,5 @@ export {
     ValuesCard,
     CourseDetail,
     CurrencyDetails,
-    ChartComponent,
     AChart
 };

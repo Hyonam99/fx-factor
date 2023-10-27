@@ -9,7 +9,7 @@ import "./faq.scss";
 const FAQ = (): React.JSX.Element => {
     const sampleQuestions = renderDemoFaq();
     const splitHalves = sampleQuestions.data.length;
-    const split = sampleQuestions.data.length / 2 + 1;
+    const split = sampleQuestions.data.length / 2;
     return (
         <>
             <section className="faq-container">

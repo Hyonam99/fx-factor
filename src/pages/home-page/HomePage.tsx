@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, MarketPricing, Marquee, Courses, Featured, Community, Testimonial } from "components/components-exports";
+import { Hero, MarketPricing, Marquee, Courses, Featured, Community } from "components/components-exports";
 
 const HomePage = (): React.JSX.Element => {
     return (
@@ -10,7 +10,6 @@ const HomePage = (): React.JSX.Element => {
             <Marquee />
             <Featured />
             <Community />
-            <Testimonial />
         </>
     )
 };
