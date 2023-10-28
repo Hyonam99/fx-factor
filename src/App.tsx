@@ -15,7 +15,7 @@ const App = (): React.JSX.Element => {
                 <Route path='/courses/:courseId' element={<UserLayout><CourseDetailPage /></UserLayout>} />
                 <Route path='/account' element={<UserLayout><UserDashboard /></UserLayout>} />
                 <Route path='/faq' element={<UserLayout><FAQ /></UserLayout>} />
-                <Route path='/currency-details/:symbol' element={<UserLayout><CurrencyPage /></UserLayout>} />
+                <Route path='/currency-details' element={<UserLayout><CurrencyPage /></UserLayout>} />
             </Routes>
         </>
     );

@@ -1,5 +1,7 @@
-// import { type FAQType } from "types/types";
 import { faker } from '@faker-js/faker';
+import { MdOutlineEventRepeat } from 'react-icons/md';
+import { TbWaveSawTool } from 'react-icons/tb';
+import { BiBookBookmark } from 'react-icons/bi';
 
 export const Links = [
     { linkName: 'Home', linkUrl: '/' },
@@ -61,21 +63,24 @@ export const renderDemoCourses = () => {
         data: [
             {
                 id: '69f33854',
-                courseDescription: 'Forex trade are a widespread group of squamate income resource, with over 6,000 traders, ranging across all continents except Antarctica',
-                courseTitle: 'Bot trade',
-                courseImage: 'https://res.cloudinary.com/maesan-product/image/upload/v1693229028/fx-factor/course-demo_m0dx55.jpg'
+                courseDescription: 'Forex classes are scheduled to begin soon, visit the "courses" section for more details',
+                courseTitle: 'Trading Classes',
+                courseImage: 'https://res.cloudinary.com/maesan-product/image/upload/v1693229028/fx-factor/course-demo_m0dx55.jpg',
+                icon: BiBookBookmark
             },
             {
                 id: 'f897ed6e6539',
-                courseDescription: 'Forex trade are a widespread group of squamate income resource, with over 6,000 traders, ranging across all continents except Antarctica',
-                courseTitle: 'Manual trade',
-                courseImage: 'https://res.cloudinary.com/maesan-product/image/upload/v1693229028/fx-factor/course-demo_m0dx55.jpg'
+                courseDescription: `Don't miss out on upcoming webinars, workshops, and live trading sessions with like-minded traders. Exchange ideas, and learn from the pros.`,
+                courseTitle: 'Community Events',
+                courseImage: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGV2ZW50fGVufDB8fDB8fHww',
+                icon: MdOutlineEventRepeat
             },
             {
                 id: '60ab-4e05-845f',
-                courseDescription: 'Forex trade are a widespread group of squamate income resource, with over 6,000 traders, ranging across all continents except Antarctica',
-                courseTitle: 'Risk Analysis',
-                courseImage: 'https://res.cloudinary.com/maesan-product/image/upload/v1693229028/fx-factor/course-demo_m0dx55.jpg'
+                courseDescription: `We're constantly introducing new tools and resources to make your trading experience even better. Keep yourself informed about updates.`,
+                courseTitle: 'New Features and Tools',
+                courseImage: 'https://res.cloudinary.com/maesan-product/image/upload/v1693229028/fx-factor/course-demo_m0dx55.jpg',
+                icon: TbWaveSawTool
             }
         ]
     }

@@ -18,4 +18,6 @@ export interface MiniCardProps {
     cardTitle?: string
     cardDetails: string
     imageUrl?: string
+    avatarAlt?: string
+    icon?: any
 }

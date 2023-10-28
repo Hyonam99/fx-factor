@@ -16,7 +16,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 }));
 
 const MiniCard = (props: MiniCardProps) => {
-    const { cardDetails, cardTitle } = props
+    const { cardDetails, cardTitle, imageUrl, avatarAlt, icon } = props
     return (
         <Box sx={{ flexGrow: 1, overflow: "hidden", px: 3 }}>
             <StyledPaper
@@ -31,7 +31,7 @@ const MiniCard = (props: MiniCardProps) => {
                 </Box>
                 <Grid container wrap="nowrap" spacing={2}>
                     <Grid item>
-                        <Avatar>FX</Avatar>
+                        {(imageUrl != null) ? <Avatar src={imageUrl} alt={avatarAlt ?? "Fx"} /> : <Avatar sx={{ bgcolor: "#d3cdcde7" }}>{icon ?? "Fx"}</Avatar>}
                     </Grid>
                     <Grid item xs>
                         <Typography>{cardDetails}</Typography>

@@ -26,27 +26,35 @@ const AboutPage = (): React.JSX.Element => {
                     to people and tutoring them. There are so many opportunities to be gained from 
                     knowing how to trade the financial market. Hence, we intend to share these 
                     opportunities by instilling knowledge in people while sharing our day-to-day 
-                    trading activities with one another.`}/>
+                    trading activities with one another.`}
+                    imageUrl="https://res.cloudinary.com/maesan-product/image/upload/v1698512018/fx-factor/fx-factor-story_huengl.jpg"
+                />
                 <ValuesCard
                     cardTitle="Our Mission"
                     cardDetails={`Our primary mission is to educate and empower people with the 
                     knowledge and skills needed to excel in the world of forex trading. 
                     We firmly believe that by imparting the right knowledge, we can unlock the 
                     immense potential of the financial markets and create life-changing opportunities 
-                    for our community members.`}/>
+                    for our community members.`}
+                    imageUrl="https://res.cloudinary.com/maesan-product/image/upload/v1693229033/fx-factor/community-bg_avekup.jpg"
+                />
                 <ValuesCard
                     cardTitle="What Sets Us Apart"
                     cardDetails={`At The Fx Factor, we go beyond traditional learning. We are a thriving 
                     community where traders come together to share ideas, explore innovative techniques 
                     for analyzing the forex market, and document their journey to profitability. 
                     We understand that the world of forex trading is dynamic, and through collective wisdom, 
-                    we aim to stay at the forefront of the industry.`}/>
+                    we aim to stay at the forefront of the industry.`}
+                    imageUrl="https://res.cloudinary.com/maesan-product/image/upload/v1693229035/fx-factor/business-man_fifofz.jpg"
+                />
                 <ValuesCard
                     cardTitle="Our Goal"
                     cardDetails={`Our ambition knows no bounds. We aspire to become the premier 
                     forex community not only in Africa but on a global scale. Our commitment to 
                     achieving this goal is reflected in our dedication to tutoring, providing accurate 
-                    trading signals, and exploring the use of trading bots, among other cutting-edge approaches`}/>
+                    trading signals, and exploring the use of trading bots, among other cutting-edge approaches`}
+                    imageUrl="https://res.cloudinary.com/maesan-product/image/upload/v1693229032/fx-factor/hero-bg-chart_qvntqy.jpg"
+                />
             </Box>
             <Box>
                 <p>

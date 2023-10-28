@@ -6,12 +6,6 @@
 
     .currency-container_wrapper {
         padding: 1rem 3rem;
-
-        .currency_pivots {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
     }
 }
 
@@ -67,12 +61,6 @@
     
         .currency-container_wrapper {
             padding: 1rem .5rem;
-
-            .currency_pivots {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: .6rem;
-            }
         }
     }
 }

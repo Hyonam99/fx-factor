@@ -3,7 +3,6 @@ import { Box, Container, Grid, Avatar, Typography } from "@mui/material";
 import MiniCard from "components/builders/cards/mini-info/MiniCard";
 import { CustomAccordion } from "components/components-exports";
 import { renderDemoCourses } from "mocked-data/mocked-data";
-
 import './featured.scss';
 
 const Featured = () => {
@@ -13,10 +12,8 @@ const Featured = () => {
             <Box className="featured_section-left">
                 <article>
                     <h1>Our recent updates</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo,
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus
-                    </p>
+                    <p>{`Keep up with the most recent information about events in our active community 
+                    as well as in the realm of forex trading in our expanding community of traders.`}</p>
                 </article>
                 <div className="featured_section-left_image-holder">
                     <img
@@ -27,7 +24,7 @@ const Featured = () => {
             </Box>
             <Box className="featured_section-right">
                 {demoCourse.data.map((item) => (
-                    <MiniCard key={item.courseTitle} cardDetails={item.courseDescription} cardTitle={item.courseTitle}/>
+                    <MiniCard key={item.courseTitle} cardDetails={item.courseDescription} cardTitle={item.courseTitle} icon={<item.icon color="#00570c"/>}/>
                 ))}
             </Box>
             <Box className="featured_section-right-accordion">
@@ -35,11 +32,11 @@ const Featured = () => {
                     <CustomAccordion
                         key={feature.courseTitle}
                         title={feature.courseTitle}
-                        miniDetails={`Gain Access to ${feature.courseTitle}`}
+                        miniDetails={`Updates on ${feature.courseTitle}`}
                         mainContent={
                             <Grid container wrap="nowrap" spacing={2}>
                                 <Grid item>
-                                    <Avatar>FX</Avatar>
+                                    <Avatar sx={{ bgcolor: "#d3cdcde7" }}>{<feature.icon color="#00570c"/>}</Avatar>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography>{feature.courseDescription}</Typography>

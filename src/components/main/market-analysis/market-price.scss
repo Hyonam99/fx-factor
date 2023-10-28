@@ -8,7 +8,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 4rem;
+        padding: 2rem 4rem;
 
         h1 {
             font-size: 3rem;
@@ -28,6 +28,13 @@
             text-align: center;
             color: $text-grey;
         }
+    }
+
+    .market-price-container_table-link {
+        padding: 0 5rem;
+        font-size: .8rem;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .market-price-container_table {
@@ -67,23 +74,7 @@
                 color: $text-grey;
             }
         }
-
-        .market-price-container_table {
-            padding: .8rem;
-
-        }
     
     }
 }
   
-.price-table-head-row {
-    .price-table-head-cell:nth-child(1) {
-        padding-left: 8px;
-    }
-}
-.price-table-row {
-
-    th {
-        padding-left: 8px;
-    }
-}

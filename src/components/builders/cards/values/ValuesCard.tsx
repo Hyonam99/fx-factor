@@ -3,14 +3,14 @@ import { Card, CardActionArea, Typography, CardMedia, CardContent, Box } from "@
 import { type MiniCardProps } from "types/interface";
 
 const ValuesCard = (props: MiniCardProps): React.JSX.Element => {
-    const { cardDetails, cardTitle } = props
+    const { cardDetails, cardTitle, imageUrl } = props
     return (
         <Card sx={{ height: 390 }} className='values-card-container'>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     height="160"
-                    image="https://res.cloudinary.com/maesan-product/image/upload/v1693229034/fx-factor/analyst-single_zduhnj.jpg"
+                    image={imageUrl}
                     alt="our-mission-value"
                 />
                 <CardContent>

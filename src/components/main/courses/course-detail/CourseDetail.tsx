@@ -70,7 +70,6 @@ const CourseDetail = (): React.JSX.Element => {
                         <Link to={linkUrl}>
                             <CustomButton title={"Purchase"} type="button" />
                         </Link>
-                        <span>{csn}</span>
                     </article>
                 </Box>
                 <Box className="course-detail_values">
