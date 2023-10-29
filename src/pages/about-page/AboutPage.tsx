@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
-// import { faker } from '@faker-js/faker';
 import { ValuesCard } from "components/components-exports";
 
 import './about-page.scss'

@@ -46,8 +46,9 @@ const Footer = () => {
                             variant="filled"
                             size='small'
                             margin='none'
-                            error={formik.errors.email !== undefined}
-                            helperText={formik.errors.email}
+                            onChange={formik.handleChange}
+                            error={formik.errors.email !== undefined && (formik.touched.email === true)}
+                            helperText={(formik.errors.email !== undefined && (formik.touched.email === true)) ? formik.errors.email : ""}
                             className="subscribe-input"
                         />
                         <CustomButton title="Subscribe" type='submit' color="primary" size="large"/>

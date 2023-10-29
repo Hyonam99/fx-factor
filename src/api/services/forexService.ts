@@ -9,11 +9,6 @@ export const getCurrencyDetails = async () => {
     return (await response).data
 }
 
-export const getCurrencyHistory = async () => {
-    const response = fxService.get(`/history?symbol=EUR/USD&period=1h&access_key=${API_KEY}&level=3`)
-    return (await response).data
-}
-
 export const getGist = async (courseId: string) => {
     const response = fxService.get(`https://api.github.com/gists/${courseId}`)
     return (await response).data
