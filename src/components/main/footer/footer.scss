@@ -148,7 +148,12 @@
         .footer_signature {
             grid-template-columns:1fr;
             margin-top: 1.1rem;
+
+            .footer_media {
+                justify-content: flex-start;
+            }
         }
+
     }
 }
 

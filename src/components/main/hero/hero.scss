@@ -64,15 +64,15 @@
 
 @keyframes changeBackground {
     0%, 33.33% {
-        background-image: url('../../../assets/images/hero-bg-chart.jpg');
+        background-image: url('https://res.cloudinary.com/maesan-product/image/upload/v1693229032/fx-factor/hero-bg-chart_qvntqy.jpg');
         @include bg-image-props();
     }
     33.34%, 66.66% {
-        background-image: url('../../../assets/images/hero-bg-analyst.jpg');
+        background-image: url('https://res.cloudinary.com/maesan-product/image/upload/v1693229033/fx-factor/hero-bg-analyst_gjukii.jpg');
         @include bg-image-props();
     }
     66.67%, 100% {
-        background-image: url('../../../assets/images/hero-bg-laptop.jpg');
+        background-image: url('https://res.cloudinary.com/maesan-product/image/upload/v1693229034/fx-factor/hero-bg-laptop_khpekl.jpg');
         @include bg-image-props();
     }
   }

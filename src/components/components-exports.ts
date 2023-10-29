@@ -7,7 +7,6 @@ import Featured from "./main/Featured/Featured";
 import Testimonial from "./main/testimonials/Testimonial";
 import Footer from "./main/footer/Footer";
 import UserNav from "./main/nav-bar/user-nav/UserNav";
-import AdminNav from "./main/nav-bar/admin-nav/AdminNav";
 import Marquee from "./builders/Marquee/Marquee";
 import CourseCard from "./builders/cards/courses/CourseCard";
 import ValuesCard from './builders/cards/values/ValuesCard';
@@ -27,7 +26,6 @@ export {
     Testimonial,
     Footer,
     UserNav,
-    AdminNav,
     CourseCard,
     CustomAccordion,
     InputField,

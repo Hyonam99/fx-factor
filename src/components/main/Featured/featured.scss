@@ -88,3 +88,9 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .featured-container {
+        padding: 3rem .8rem !important;
+    }
+}

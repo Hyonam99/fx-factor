@@ -6,7 +6,6 @@ import { RiTwitterXFill } from 'react-icons/ri';
 import { MdLocationPin } from 'react-icons/md';
 import { Box } from "@mui/material";
 import { CustomButton, InputField } from "components/components-exports";
-import LogoShort from "assets/images/logo-short-clipped.png"
 import './footer.scss';
 import { Link } from "react-router-dom";
 
@@ -57,7 +56,7 @@ const Footer = () => {
             </section>
             <section className="footer_signature">
                 <Box>
-                    <img src={LogoShort} alt='fx-factor-logo' className='footer_logo-short'/>
+                    <img src={'https://res.cloudinary.com/maesan-product/image/upload/v1698565851/fx-factor/logo-short-clipped_bmuu6l.png'} alt='fx-factor-logo' className='footer_logo-short'/>
                 </Box>
                 <p> <MdLocationPin size={20}/> 78, Egbe Road, Iyana-Ejigbo</p>
                 <div className="footer_media">
