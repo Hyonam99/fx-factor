@@ -58,7 +58,7 @@ const Footer = () => {
                 <Box>
                     <img src={'https://res.cloudinary.com/maesan-product/image/upload/v1698565851/fx-factor/logo-short-clipped_bmuu6l.png'} alt='fx-factor-logo' className='footer_logo-short'/>
                 </Box>
-                <p> <MdLocationPin size={20}/> 78, Egbe Road, Iyana-Ejigbo</p>
+                <p> <MdLocationPin size={20}/> 78, Egbe Road, Iyana-Ejigbo, Lagos</p>
                 <div className="footer_media">
                     <span className="footer_social-media_icons">
                         <Link to="https://twitter.com/Fx_Factor?t=nFu0rZmr2YhaQVRTT5tz8Q&s=09" target="_blank">
