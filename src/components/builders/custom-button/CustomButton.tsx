@@ -11,10 +11,11 @@ interface CustomButtonProps {
     color?: "primary" | "inherit" | "secondary" | "success" | "error" | "info" | "warning" | undefined
     className?: string | ''
     type?: "button" | "reset" | "submit"
+    disabled?: boolean
 }
 
 const CustomButton = (props: CustomButtonProps): React.JSX.Element => {
-    const { title, size, outlined, onClick, color, className, type } = props;
+    const { title, size, outlined, onClick, color, className, type, disabled } = props;
 
     return (
         <Button
@@ -23,6 +24,7 @@ const CustomButton = (props: CustomButtonProps): React.JSX.Element => {
             size={size}
             type={type}
             onClick={onClick}
+            disabled={disabled}
             className={`custom-button ${className}`}
         >
             {title}

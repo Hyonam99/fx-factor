@@ -7,8 +7,11 @@ export type CourseItemType = {
     courseHighlights?: string[]
     courseUsp?: string[]
     courseOutro?: string
-    coursePrice?: number
+    coursePrice: number
     rating?: number
+    duration: string
+    deadline: string
+    enrolled: number
 };
 
 export type FAQType = {

@@ -79,6 +79,7 @@ const UserMobileNav = () => {
                 open={state.top}
                 onClose={toggleDrawer('top', false)}
                 className='custom-drawer'
+                transitionDuration={500}
             >
                 {list('top')}
             </Drawer>

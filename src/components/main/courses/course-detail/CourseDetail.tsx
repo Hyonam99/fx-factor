@@ -6,6 +6,7 @@ import parse from "html-react-parser";
 import { type CourseItemType, type GistContentResponse } from "types/types";
 import { useGetCourseContent } from "api/hooks/forexHook";
 import "./course-detail.scss";
+import { formatCurrency } from "utils/helpers";
 
 const CourseDetail = (): React.JSX.Element => {
     const { courseId } = useParams();
@@ -41,7 +42,7 @@ const CourseDetail = (): React.JSX.Element => {
     } else if (csn === "intermediate class") {
         linkUrl = "#";
     } else if (csn === "beginners class") {
-        linkUrl = "#";
+        linkUrl = "https://paystack.com/pay/vwsilvj3uo";
     }
 
     return (
@@ -62,13 +63,13 @@ const CourseDetail = (): React.JSX.Element => {
                                 size="small"
                                 color="white"
                             />
-                            <span>26 Enrolled </span>
+                            <span>{course?.enrolled} Enrolled </span>
                         </Box>
-                        <span>Duration : 3 months</span>
-                        <span>Closing Date : 26th December 2023</span>
-                        <p>Price: ${course?.coursePrice}</p>
+                        <span>Duration : {course?.duration}</span>
+                        <span>Closing Date : {course?.deadline}</span>
+                        <p>Price: ₦{formatCurrency((course?.coursePrice ?? 0) * 1000)}</p>
                         <Link to={linkUrl}>
-                            <CustomButton title={"Purchase"} type="button" />
+                            <CustomButton title={csn === "beginners class" ? "Purchase" : "Coming soon"} type="button" disabled={csn !== "beginners class"}/>
                         </Link>
                     </article>
                 </Box>
