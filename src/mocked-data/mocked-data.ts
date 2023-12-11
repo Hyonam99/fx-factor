@@ -30,7 +30,7 @@ export const renderDemoFaq = () => {
                 id: faker.string.uuid(),
                 question: `Are your courses suitable for beginners?`,
                 explanation: `Yes, we offer courses for traders of all levels. 
-                Our beginner(slot in the actual name of the course) course is designed to provide a strong 
+                Our beginner course is designed to provide a strong 
                 foundation for those new to forex.`
             },
             {
@@ -43,15 +43,15 @@ export const renderDemoFaq = () => {
             {
                 id: faker.string.uuid(),
                 question: `How do I contact your support team if I have questions?`,
-                explanation: `You can reach our support team through the "Contact Us"(embed link) page on our website, or you can ask questions in the community forum for assistance.
+                explanation: `You can reach our support team through a phone call <span>08100905654</span>, or chat via whatsApp; <a href="https://wa.link/6qt9k3" target="_blank">https://wa.link/6qt9k3</a>.
 
-                Alternatively: You can contact our support team at Support@fxfactor.com.`
+                Alternatively: You can contact our support team via mail at <a href="mailto:trade.fxfactor@gmail.com" target="_blank">trade.fxfactor@gmail.com</a>`
             },
             {
                 id: faker.string.uuid(),
                 question: `What payment methods do you accept for course enrollment?`,
-                explanation: `We accept various payment methods, including credit/debit cards and PayPal. 
-                You can find the payment options during the course enrollment process.`
+                explanation: `We accept payments through bank transfers and paystack. 
+                You will find the payment option during the course enrollment process.`
             }
         ]
     };

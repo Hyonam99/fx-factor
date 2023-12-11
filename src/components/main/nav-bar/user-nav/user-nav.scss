@@ -119,6 +119,10 @@ nav {
         padding: 0 !important;
         li {
             list-style-type: none;
+
+            &:first-child {
+                padding-top: .5rem;
+            }
             
             a {
                 display: block;

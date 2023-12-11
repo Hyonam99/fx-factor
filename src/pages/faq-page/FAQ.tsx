@@ -1,8 +1,9 @@
-import { Box } from "@mui/material";
 import React from "react";
+import { Box } from "@mui/material";
 import { CustomAccordion } from "components/components-exports";
 import { renderDemoFaq } from "mocked-data/mocked-data";
 import { type FAQType } from "types/types";
+import parse from "html-react-parser";
 
 import "./faq.scss";
 
@@ -37,7 +38,7 @@ const FAQ = (): React.JSX.Element => {
                                 <CustomAccordion
                                     key={question.id}
                                     title={question.question}
-                                    mainContent={question.explanation}
+                                    mainContent={parse(question.explanation)}
                                     itemIndex={i}
                                     className="faq-accordion"
                                 />

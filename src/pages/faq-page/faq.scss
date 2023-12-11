@@ -26,6 +26,10 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.8rem;
 
+        a, span {
+            color: #0055f2 !important;
+        }
+
         .faq-content-left {
             .faq-accordion {
                 @include reset-accordion();
