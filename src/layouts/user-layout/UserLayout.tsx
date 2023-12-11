@@ -1,10 +1,10 @@
-import React from 'react';
-import { UserNav, Footer } from 'components/components-exports';
+import React from "react";
+import { UserNav, Footer } from "components/components-exports";
 
-import './user-layout.scss';
+import "./user-layout.scss";
 
 export interface UserLayoutProps {
-    children: React.JSX.Element
+    children: React.JSX.Element;
 }
 
 const UserLayout = ({ children }: UserLayoutProps) => {
@@ -14,15 +14,13 @@ const UserLayout = ({ children }: UserLayoutProps) => {
                 <UserNav />
             </header>
 
-            <main>
-                {children}
-            </main>
+            <main>{children}</main>
 
             <footer>
                 <Footer />
             </footer>
         </>
-    )
+    );
 };
 
 export default UserLayout;

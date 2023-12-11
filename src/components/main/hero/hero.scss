@@ -37,24 +37,9 @@
 
         .hero-container_wrapper_buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             padding: 1rem;
-            gap: 1.2rem;
-
-            a:nth-child(2) {
-
-                button {
-                    width: 100%;
-                    color: $text-white;
-                    border: 2px solid #087216;
-    
-                    &:hover,
-                    &:focus{
-                        background: $primary-color-dark;
-                        opacity: .8;
-                    }
-                }
-            }
+            gap: .6rem;
 
         }
     }

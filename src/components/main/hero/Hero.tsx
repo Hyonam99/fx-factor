@@ -18,9 +18,6 @@ const Hero = (): React.JSX.Element => {
                     <Link to='/courses'>
                         <CustomButton title='Get A Course' size='large' color="primary"/>
                     </Link>
-                    <Link to='#'>
-                        <CustomButton title='Join Us' size='large' color="primary" outlined/>
-                    </Link>
                 </Box>
             </Box>
         </Container>

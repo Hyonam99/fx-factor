@@ -1,11 +1,13 @@
 import React from "react";
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
-import { FaTelegram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { LiaTelegram } from "react-icons/lia";
+import { SlSocialFacebook } from "react-icons/sl";
 import { RiTwitterXFill } from 'react-icons/ri';
 import { MdLocationPin } from 'react-icons/md';
 import { Box } from "@mui/material";
-import { CustomButton, InputField } from "components/components-exports";
+import { CustomButton, InputField, QuickAction } from "components/components-exports";
 import './footer.scss';
 import { Link } from "react-router-dom";
 
@@ -61,23 +63,31 @@ const Footer = () => {
                 <p> <MdLocationPin size={20}/> 78, Egbe Road, Iyana-Ejigbo, Lagos</p>
                 <div className="footer_media">
                     <span className="footer_social-media_icons">
-                        <Link to="https://twitter.com/Fx_Factor?t=nFu0rZmr2YhaQVRTT5tz8Q&s=09" target="_blank">
+                        <Link to="https://x.com/Fx_Factor?t=U_piOfAxgEJOgLUHjUwTig&s=09" target="_blank">
                             <RiTwitterXFill />
                         </Link>
                     </span>
                     <span className="footer_social-media_icons">
-                        <Link to="https://t.me/+oq9BDZt0rk4zMDJk" target="_blank">
-                            <FaTelegram />
+                        <Link to="https://instagram.com/trade.fxfactor?igshid=YTQwZjQ0NmI0OA==" target="_blank">
+                            <FaInstagram />
                         </Link>
                     </span>
                     <span className="footer_social-media_icons">
-                        <Link to="https://www.facebook.com/profile.php?id=61552635560767&mibextid=ZbWKwL" target="_blank">
-                            <FaFacebook />
+                        <Link to="https://t.me/+oq9BDZt0rk4zMDJk" target="_blank">
+                            <LiaTelegram />
+                        </Link>
+                    </span>
+                    <span className="footer_social-media_icons">
+                        <Link to="https://www.facebook.com/profile.php?id=61552635560767&mibextid=JRoKGi" target="_blank">
+                            <SlSocialFacebook />
                         </Link>
                     </span>
                 </div>
             </section>
             <div className="footer-copyright"><p>copy right 2023 fx factor</p></div>
+            <div className="quick-action-container">
+                <QuickAction />
+            </div>
         </section>
     )
 };

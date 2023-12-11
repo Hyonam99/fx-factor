@@ -43,7 +43,7 @@ export const renderDemoFaq = () => {
             {
                 id: faker.string.uuid(),
                 question: `How do I contact your support team if I have questions?`,
-                explanation: `You can reach our support team through a phone call <span>08100905654</span>, or chat via whatsApp; <a href="https://wa.link/6qt9k3" target="_blank">https://wa.link/6qt9k3</a>.
+                explanation: `You can reach our support team through a phone call <a href="tel:08100905654">08100905654</a>, or chat via whatsApp; <a href="https://wa.link/6qt9k3" target="_blank">https://wa.link/6qt9k3</a>.
 
                 Alternatively: You can contact our support team via mail at <a href="mailto:trade.fxfactor@gmail.com" target="_blank">trade.fxfactor@gmail.com</a>`
             },
