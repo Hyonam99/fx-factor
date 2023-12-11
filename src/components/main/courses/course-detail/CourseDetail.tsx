@@ -63,12 +63,10 @@ const CourseDetail = (): React.JSX.Element => {
                                 size="small"
                                 color="white"
                             />
-                            <span>{course?.enrolled} Enrolled </span>
                         </Box>
                         <span>Duration : {course?.duration}</span>
-                        <span>Closing Date : {course?.deadline}</span>
                         <p>Price: ₦{formatCurrency((course?.coursePrice ?? 0) * 1000)}</p>
-                        <Link to={linkUrl}>
+                        <Link to={linkUrl} target="_blank" rel="noreferrer">
                             <CustomButton title={csn === "beginners class" ? "Purchase" : "Coming soon"} type="button" disabled={csn !== "beginners class"}/>
                         </Link>
                     </article>

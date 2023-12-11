@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import './community.scss';
 import { CustomButton } from "components/components-exports";
+import { Link } from "react-router-dom";
 
 const Community = () => {
     return (
@@ -14,7 +15,9 @@ const Community = () => {
                     Explore the site, join the community and make connections with other traders at the FX Factor`}</p>
                 </Box>
                 <Box className="community-container_button">
-                    <CustomButton title="Join us Now"/>
+                    <Link to="https://t.me/+oq9BDZt0rk4zMDJk" target="_blank" rel="noreferrer">
+                        <CustomButton title="Join us Now"/>
+                    </Link>
                 </Box>
             </Box>
         </Container>

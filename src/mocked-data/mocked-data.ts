@@ -24,7 +24,7 @@ export const renderDemoFaq = () => {
                 id: faker.string.uuid(),
                 question: `What is your community like, and how can I join?`,
                 explanation: `Our forex community is a supportive network of traders. 
-                To join, simply sign up for one of our courses, and you'll gain access to the community forum.`
+                To join, simply click on the "Join us" button in the community section on the home page, and you'll gain access to the community forum.`
             },
             {
                 id: faker.string.uuid(),

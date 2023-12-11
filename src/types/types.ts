@@ -10,8 +10,6 @@ export type CourseItemType = {
     coursePrice: number
     rating?: number
     duration: string
-    deadline: string
-    enrolled: number
 };
 
 export type FAQType = {
