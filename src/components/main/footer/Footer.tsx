@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -5,25 +6,32 @@ import { FaInstagram } from "react-icons/fa";
 import { LiaTelegram } from "react-icons/lia";
 import { SlSocialFacebook } from "react-icons/sl";
 import { RiTwitterXFill } from "react-icons/ri";
-import { MdLocationPin } from "react-icons/md";
-import { Box, DialogTitle, Dialog } from "@mui/material";
+import { MdLocationPin, MdOutlineMarkEmailRead } from "react-icons/md";
+import { Box, Dialog } from "@mui/material";
 import {
     CustomButton,
     InputField,
     QuickAction
 } from "components/components-exports";
-import "./footer.scss";
 import { Link } from "react-router-dom";
 import MailchimpSubscribe, { type EmailFormFields } from "react-mailchimp-subscribe";
+import "./footer.scss";
 
-const SubscribeForm = ({ status, message, subscribe }: { status: string, message: string, subscribe: (data: EmailFormFields) => void }) => {
-
+const SubscribeForm = ({
+    status,
+    message,
+    subscribe
+}: {
+    status: string;
+    message: string;
+    subscribe: (data: EmailFormFields) => void;
+}) => {
     const isLoading = status === "sending";
     const isSuccess = status === "success";
     const isError = status === "error";
 
-    const [userAlert, setUserAlert] = useState({ shown: false, message: "" })
-    const [showError, setShowError] = useState(false)
+    const [userAlert, setUserAlert] = useState({ shown: false, message: "" });
+    const [showError, setShowError] = useState(false);
 
     const newsLetterSchema = Yup.object().shape({
         email: Yup.string()
@@ -45,32 +53,27 @@ const SubscribeForm = ({ status, message, subscribe }: { status: string, message
             setUserAlert({
                 shown: true,
                 message
-            })
+            });
         }
 
         setTimeout(() => {
-            setUserAlert({ shown: false, message: "" })
-        }, 3000)
-
-    }, [isSuccess])
+            setUserAlert({ shown: false, message: "" });
+        }, 4000);
+    }, [isSuccess]);
 
     useEffect(() => {
         if (isError) {
-            setShowError(true)
+            setShowError(true);
         }
 
         setTimeout(() => {
-            setShowError(false)
-        }, 5000)
+            setShowError(false);
+        }, 5000);
+    }, [isError]);
 
-    }, [isError])
     return (
         <form onSubmit={formik.handleSubmit}>
-            {showError && <span
-                className={`subscription-message`}
-            >
-                {message}
-            </span>}
+            {showError && <span className={`subscription-message`}>unable to subscribe at the moment, please try in few minutes</span>}
             <Box className="subscribe_form-wrapper">
                 <InputField
                     id="email"
@@ -81,12 +84,10 @@ const SubscribeForm = ({ status, message, subscribe }: { status: string, message
                     margin="none"
                     onChange={formik.handleChange}
                     error={
-                        formik.errors.email !== undefined
-                        && formik.touched.email === true
+                        formik.errors.email !== undefined && formik.touched.email === true
                     }
                     helperText={
-                        formik.errors.email !== undefined
-                        && formik.touched.email === true
+                        formik.errors.email !== undefined && formik.touched.email === true
                             ? formik.errors.email
                             : ""
                     }
@@ -101,16 +102,27 @@ const SubscribeForm = ({ status, message, subscribe }: { status: string, message
                 />
             </Box>
 
-            <Dialog onClose={() => { setUserAlert({ shown: false, message: "" }) } } open={userAlert.shown}>
-                <DialogTitle>Subscription successful</DialogTitle>
-                <Box>You have successfully subscribed to our profitable newsletter</Box>
+            <Dialog
+                onClose={() => {
+                    setUserAlert({ shown: false, message: "" });
+                }}
+                open={userAlert.shown}
+            >
+                <Box className="subscription-alert">
+                    <Box>
+                        <MdOutlineMarkEmailRead size={48} />
+                    </Box>
+                    <p>
+                        {userAlert.message}
+                    </p>
+                </Box>
             </Dialog>
         </form>
     );
-}
+};
 
 const Footer = () => {
-    const postUrl = `https://thefxfactor.us21.list-manage.com/subscribe/post?u=ba538f5c3f8ec09f6e2826d51&id=164f38dd0e`;
+    const postUrl = `${process.env.REACT_APP_URL}?u=${process.env.REACT_APP_U}&id=${process.env.REACT_APP_D}`;
 
     return (
         <section className="footer-container">
@@ -128,7 +140,11 @@ const Footer = () => {
                 <MailchimpSubscribe
                     url={postUrl}
                     render={({ status, message, subscribe }: any) => (
-                        <SubscribeForm status={ status } message={ message } subscribe={ subscribe }/>
+                        <SubscribeForm
+                            status={status}
+                            message={message}
+                            subscribe={subscribe}
+                        />
                     )}
                 />
             </section>
