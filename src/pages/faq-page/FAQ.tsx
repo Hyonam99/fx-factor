@@ -4,13 +4,13 @@ import { CustomAccordion } from "components/components-exports";
 import { renderDemoFaq } from "mocked-data/mocked-data";
 import { type FAQType } from "types/types";
 import parse from "html-react-parser";
-
 import "./faq.scss";
 
 const FAQ = (): React.JSX.Element => {
     const sampleQuestions = renderDemoFaq();
     const splitHalves = sampleQuestions.data.length;
     const split = sampleQuestions.data.length / 2;
+
     return (
         <>
             <section className="faq-container">
