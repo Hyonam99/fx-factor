@@ -122,7 +122,7 @@ const SubscribeForm = ({
 };
 
 const Footer = () => {
-    const postUrl = `${process.env.REACT_APP_URL}?u=${process.env.REACT_APP_U}&id=${process.env.REACT_APP_D}`;
+    const postUrl = `${import.meta.env.REACT_APP_URL}?u=${import.meta.env.REACT_APP_U}&id=${import.meta.env.REACT_APP_D}`;
 
     return (
         <section className="footer-container">
