@@ -26,7 +26,16 @@
       "incremental": true,
     },
     "include": [
-      "src/**/*", "**/*.ts", "**/*.tsx", "src/components", "src/__test__", "src/declaration.d.ts", "src/assets"
+      "src/**/*",
+      "**/*.ts",
+      "**/*.tsx",
+      "src/components",
+      "src/__test__",
+      "jest.config.js",
+      "jest.setup.js", 
+      "src/pages",
+      "src/declaration.d.ts",
+      "src/assets"
     ],
     "exclude": ["node_modules"]
 }
