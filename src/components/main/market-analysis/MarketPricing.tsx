@@ -14,7 +14,9 @@ const MarketPricing = (): React.JSX.Element => {
             </Box>
 
             <Box className="market-price-container_table-link">
-                <Link to="/currency-details">view technical chart</Link>
+                <Box className="link_wrapper">
+                    <Link to="/currency-details">view technical chart</Link>
+                </Box>
             </Box>
             <Box className="market-price-container_table">
                 <ForexCrossRates colorTheme="light" width="100%" height={350} />

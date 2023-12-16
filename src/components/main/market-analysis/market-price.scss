@@ -36,14 +36,23 @@
         display: flex;
         justify-content: flex-end;
 
-        a {
-            display: block;
-            color: white;
-            border-radius: .3rem;
+        .link_wrapper {
+            flex: .6;
             text-align: right;
-            padding: 6px 11px;
-            background: $primary-color;
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                display: block;
+                color: white;
+                width: fit-content !important;
+                border-radius: .3rem;
+                text-align: right;
+                padding: 6px 11px;
+                background: $primary-color;
+            }
         }
+
     }
 
     .market-price-container_table {
