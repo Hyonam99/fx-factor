@@ -77,6 +77,20 @@
                 }
             }
         }
+
+        .course-detail_outro {
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                display: block;
+                margin-block-start: .5em;
+                margin-block-end: .5em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 10px;
+            }
+        }
     }
 }
 

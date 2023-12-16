@@ -90,8 +90,10 @@ const CourseDetail = (): React.JSX.Element => {
                             </ul>
                         </Box>
                     </Box>
-                    <Box>
-                        <span>{course?.courseOutro}</span>
+                    <Box className="course-detail_outro">
+                        <ul>
+                            <li>{course?.courseOutro}</li>
+                        </ul>
                     </Box>
                 </Box>
             </Box>
