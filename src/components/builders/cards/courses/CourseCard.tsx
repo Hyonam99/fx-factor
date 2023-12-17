@@ -6,34 +6,42 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { type CourseCardProps } from "types/interface";
-
+import { motion } from "framer-motion";
 import './course-card.scss';
 import { Link } from "react-router-dom";
+import { cardVariants } from "utils/themes";
 
 const CourseCard = (props: CourseCardProps) => {
-    const { courseItem } = props
+    const { courseItem, animationDelay } = props
+
     return (
-        <>
-            <Card sx={{ width: 300 }}>
-                <CardMedia
-                    component="img"
-                    alt="forex"
-                    height="140"
-                    image={courseItem.courseImage}
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
-                        {courseItem.courseTitle}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" minHeight="160.9px">
-                        {courseItem.courseIntro}
-                    </Typography>
-                </CardContent>
-                <CardActions className="card-button-action">
-                    <Link to={`/courses/${courseItem.id as string}/?csn=${courseItem.courseTitle.toLowerCase()}`}><Button>Learn More</Button></Link>
-                </CardActions>
-            </Card>
-        </>
+        <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+        >
+            <motion.div variants={cardVariants(animationDelay as number)}>
+                <Card sx={{ width: 300 }}>
+                    <CardMedia
+                        component="img"
+                        alt="forex"
+                        height="140"
+                        image={courseItem.courseImage}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h6" component="div">
+                            {courseItem.courseTitle}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" minHeight="160.9px">
+                            {courseItem.courseIntro}
+                        </Typography>
+                    </CardContent>
+                    <CardActions className="card-button-action">
+                        <Link to={`/courses/${courseItem.id as string}/?csn=${courseItem.courseTitle.toLowerCase()}`}><Button>Learn More</Button></Link>
+                    </CardActions>
+                </Card>
+            </motion.div>
+        </motion.div>
     )
 };
 

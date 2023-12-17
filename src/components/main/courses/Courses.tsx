@@ -33,8 +33,8 @@ const Courses = (props: CoursesProps) => {
             <Box className="courses-indicator"><BsArrowLeft size={18}/> swipe to view more <BsArrowRight size={18} /> </Box>
             <Box className="courses-list">
                 <Box className="courses-list_wrapper">
-                    {courses?.slice(0, limit).map((course) => (
-                        <CourseCard key={course.courseTitle} courseItem={course}/>
+                    {courses?.slice(0, limit).map((course, i: number) => (
+                        <CourseCard key={course.courseTitle} courseItem={course} animationDelay={i}/>
                     ))}
                 </Box>
             </Box>

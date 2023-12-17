@@ -12,6 +12,7 @@ export interface CoursesProps {
 
 export interface CourseCardProps {
     courseItem: CourseItemType
+    animationDelay?: number
 }
 
 export interface MiniCardProps {

@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { type Variants } from "framer-motion";
 
 export const theme = createTheme({
     palette: {
@@ -49,7 +50,7 @@ export const headingVariant = (delay: number) => {
     };
 };
 
-export const fadeIn = (direction: string, type: any, delay: any, duration: any) => {
+export const fadeIn = (direction: string, delay: number, duration: number, type?: string) => {
     return {
         hidden: {
             x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -135,6 +136,22 @@ export const pageVariants = {
         x: "-100vw",
         transition: {
             duration: 0.4
+        }
+    }
+};
+
+export const cardVariants = (delay: number): Variants => {
+    return {
+        offscreen: {
+            y: 500
+        },
+        onscreen: {
+            y: 0,
+            transition: {
+                bounce: 0.4,
+                duration: 1,
+                delay
+            }
         }
     }
 };
