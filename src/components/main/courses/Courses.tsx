@@ -11,6 +11,7 @@ const Courses = (props: CoursesProps) => {
     const { limit } = props
     const getCourses = useGetCourseContent()
     const [courses, setCourses] = useState<CourseItemType[]>([])
+    const animationDelay = [0.2, 0.4, 0.6]
 
     useEffect(() => {
         getCourses.call('9f4ac7e02a550cc040f4ecc765f3dca8')
@@ -34,7 +35,7 @@ const Courses = (props: CoursesProps) => {
             <Box className="courses-list">
                 <Box className="courses-list_wrapper">
                     {courses?.slice(0, limit).map((course, i: number) => (
-                        <CourseCard key={course.courseTitle} courseItem={course} animationDelay={i}/>
+                        <CourseCard key={course.courseTitle} courseItem={course} animationDelay={animationDelay[i]}/>
                     ))}
                 </Box>
             </Box>
