@@ -11,7 +11,7 @@ jest.mock("api/index", () => {
 })
 
 describe("Hero component", () => {
-    it("renders the hero component", async () => {
+    it("renders the hero component", () => {
         const { getByText, getByRole } = _render(<Hero />)
 
         expect(getByText("Unleash Your Forex Potential.")).toBeInTheDocument()
