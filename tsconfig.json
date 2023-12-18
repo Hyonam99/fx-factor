@@ -36,8 +36,8 @@
       "src/pages",
       "src/declaration.d.ts",
       "src/assets",
-      "emptyMock.js",
-      "svgTransform.js"
+      "__mocks__/emptyMock.js",
+      "__mocks__/svgTransform.js"
     ],
     "exclude": ["node_modules"]
 }

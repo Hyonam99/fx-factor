@@ -16,6 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import MailchimpSubscribe, { type EmailFormFields } from "react-mailchimp-subscribe";
 import "./footer.scss";
+import { API_KEY, API_KEY_U, API_KEY_D } from "api";
 
 const SubscribeForm = ({
     status,
@@ -122,7 +123,7 @@ const SubscribeForm = ({
 };
 
 const Footer = () => {
-    const postUrl = `${import.meta.env.VITE_APP_URL}?u=${import.meta.env.VITE_APP_U}&id=${import.meta.env.VITE_APP_D}`;
+    const postUrl = `${API_KEY}?u=${API_KEY_U}&id=${API_KEY_D}`;
 
     return (
         <section className="footer-container">

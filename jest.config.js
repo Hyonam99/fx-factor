@@ -28,7 +28,8 @@ const config = {
  * simulate a mock file "emptyMock.js" to redirect jest from testing stylesheets
  ****************************************************************************************************/
     moduleNameMapper: {
-        "\\.(css|scss)$": "<rootDir>/emptyMock.js" //
+        "\\.(css|scss)$": "<rootDir>/__mocks__/emptyMock.js",
+        "react-ts-tradingview-widgets": "<rootDir>/__mocks__/emptyMock.js"
     },
 
     // A list of paths to modules that run some code to configure or set up the testing framework before each test
@@ -40,7 +41,7 @@ const config = {
     // A map from regular expressions to paths to transformers
     transform: {
         "^.+\\.(ts|tsx)$": "ts-jest",
-        "^.+\\.svg$": "<rootDir>/svgTransform.js"
+        "^.+\\.svg$": "<rootDir>/__mocks__/svgTransform.js"
     },
 
     /******************************************************************************************************
@@ -51,7 +52,6 @@ const config = {
 
     // specify the folders where the code coverage should be collated from
     collectCoverageFrom: [
-        // "src/**/*.ts", // will open this up to test for hooks when needed
         "src/**/*.tsx"
     ]
 };
