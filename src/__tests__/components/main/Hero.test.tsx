@@ -11,8 +11,12 @@ jest.mock("api/index", () => {
 })
 
 describe("Hero component", () => {
-    it("renders the hero component", () => {
-        const { getByText } = _render(<Hero />)
+    it("renders the hero component", async () => {
+        const { getByText, getByRole } = _render(<Hero />)
+
         expect(getByText("Unleash Your Forex Potential.")).toBeInTheDocument()
+        expect(getByText("Join our community & unlock profitable insights with The FX Factor.")).toBeInTheDocument()
+        expect(getByRole("link")).toHaveAttribute("href", "/courses")
+        expect(getByRole("button", { name: "Get A Course" })).toBeInTheDocument()
     })
 })
