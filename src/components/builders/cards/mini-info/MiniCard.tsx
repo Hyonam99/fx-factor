@@ -31,7 +31,7 @@ const MiniCard = (props: MiniCardProps) => {
                 </Box>
                 <Grid container wrap="nowrap" spacing={2}>
                     <Grid item>
-                        {(imageUrl != null) ? <Avatar src={imageUrl} alt={avatarAlt ?? "Fx"} /> : <Avatar sx={{ bgcolor: "#d3cdcde7" }}>{icon ?? "Fx"}</Avatar>}
+                        {(imageUrl != null) ? <Avatar src={imageUrl} alt={avatarAlt ?? "Fx"} data-testid="card-avatar-with-image"/> : <Avatar sx={{ bgcolor: "#d3cdcde7" }} data-testid="card-avatar-with-icon">{icon ?? "Fx"}</Avatar>}
                     </Grid>
                     <Grid item xs>
                         <Typography>{cardDetails}</Typography>

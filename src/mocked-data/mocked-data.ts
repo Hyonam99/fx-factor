@@ -3,6 +3,7 @@ import { MdOutlineEventRepeat } from 'react-icons/md';
 import { TbWaveSawTool } from 'react-icons/tb';
 import { BiBookBookmark } from 'react-icons/bi';
 import { type CourseItemType } from 'types/types';
+import { type MiniCardProps } from 'types/interface';
 
 export const Links = [
     { linkName: 'Home', linkUrl: '/' },
@@ -99,4 +100,12 @@ export const mockedCourseItem: CourseItemType = {
     courseOutro: faker.lorem.sentence(5),
     coursePrice: 30,
     duration: "1 month"
+}
+
+export const mockedCardProps: MiniCardProps = {
+    cardTitle: faker.lorem.sentence(5),
+    cardDetails: faker.lorem.paragraph(2),
+    imageUrl: faker.image.url(),
+    avatarAlt: faker.word.words(2),
+    icon: faker.image.url(),
 }
