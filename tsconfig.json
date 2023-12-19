@@ -37,7 +37,8 @@
       "src/declaration.d.ts",
       "src/assets",
       "__mocks__/emptyMock.js",
-      "__mocks__/svgTransform.js"
+      "__mocks__/svgTransform.js",
+      "__mocks__/intersection.js",
     ],
     "exclude": ["node_modules"]
 }

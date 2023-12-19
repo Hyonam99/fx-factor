@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 import { MdOutlineEventRepeat } from 'react-icons/md';
 import { TbWaveSawTool } from 'react-icons/tb';
 import { BiBookBookmark } from 'react-icons/bi';
+import { type CourseItemType } from 'types/types';
 
 export const Links = [
     { linkName: 'Home', linkUrl: '/' },
@@ -85,4 +86,17 @@ export const renderDemoCourses = () => {
         ]
     }
 
+}
+
+export const mockedCourseItem: CourseItemType = {
+    id: faker.string.uuid(),
+    courseImage: faker.image.url(),
+    courseIntro: faker.lorem.paragraph(1),
+    courseTitle: faker.lorem.sentence(5),
+    courseDescription: faker.lorem.paragraph(3),
+    courseHighlights: [faker.lorem.sentence(8)],
+    courseUsp: [faker.lorem.sentence(5)],
+    courseOutro: faker.lorem.sentence(5),
+    coursePrice: 30,
+    duration: "1 month"
 }

@@ -24,7 +24,7 @@ const CourseCard = (props: CourseCardProps) => {
                 <Card sx={{ width: 300 }}>
                     <CardMedia
                         component="img"
-                        alt="forex"
+                        alt="forex-course"
                         height="140"
                         image={courseItem.courseImage}
                     />
