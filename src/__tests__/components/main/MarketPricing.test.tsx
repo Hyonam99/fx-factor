@@ -10,10 +10,8 @@ jest.mock("api/index", () => {
     };
 })
 
-//  this test is currently skipped until a workable solution
-//  is gotten for the error due to the render method of the widget.
 
-describe.skip("Market pricing component", () => {
+describe("Market pricing component", () => {
     it("renders the market pricing component with the widget", async () => {
         const { getByText, getByRole, getByTestId } = _render(<MarketPricing />)
 

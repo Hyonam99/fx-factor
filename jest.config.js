@@ -12,7 +12,7 @@ const config = {
     collectCoverage: false,
 
     // Stop running tests after `n` failures
-    bail: 3,
+    // bail: 3,
 
     // The directory where Jest should output its coverage files
     coverageDirectory: "coverage",
@@ -29,7 +29,7 @@ const config = {
  ****************************************************************************************************/
     moduleNameMapper: {
         "\\.(css|scss)$": "<rootDir>/__mocks__/emptyMock.js",
-        "react-ts-tradingview-widgets": "<rootDir>/__mocks__/emptyMock.js"
+        "react-ts-tradingview-widgets": "<rootDir>/__mocks__/widgetMock.js"
     },
 
     // A list of paths to modules that run some code to configure or set up the testing framework before each test
