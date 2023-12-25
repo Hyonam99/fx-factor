@@ -19,6 +19,7 @@ const CourseCard = (props: CourseCardProps) => {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
+            data-testid="course-card-container"
         >
             <motion.div variants={cardVariants(animationDelay as number)}>
                 <Card sx={{ width: 300 }}>
@@ -29,10 +30,10 @@ const CourseCard = (props: CourseCardProps) => {
                         image={courseItem.courseImage}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h6" component="div" data-testid="course-card-title">
                             {courseItem.courseTitle}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" minHeight="160.9px">
+                        <Typography variant="body2" color="text.secondary" minHeight="160.9px" data-testid="course-card-intro">
                             {courseItem.courseIntro}
                         </Typography>
                     </CardContent>
