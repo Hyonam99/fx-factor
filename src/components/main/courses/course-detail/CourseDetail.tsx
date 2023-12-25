@@ -26,7 +26,7 @@ const CourseDetail = (): React.JSX.Element => {
     }, []);
 
     useEffect(() => {
-        if (getCourses.data !== undefined && getCourses.data !== null) {
+        if (getCourses.data !== undefined && getCourses.data !== null && courses.length === 0) {
             const apiCourses = Object.values(
                 getCourses.data?.files
             )[0] as GistContentResponse;
@@ -46,9 +46,9 @@ const CourseDetail = (): React.JSX.Element => {
     }
 
     return (
-        <Container maxWidth={false} className="course-detail">
-            <Box className="course-detail_container-wrapper">
-                <Box className="course-detail_banner">
+        <Container maxWidth={false} className="course-detail" data-testid="course-detail-container">
+            <Box className="course-detail_container-wrapper" data-testid="course-detail-wrapper">
+                <Box className="course-detail_banner" data-testid="course-detail-banner">
                     <article>
                         <h2>{course?.courseTitle}</h2>
                         <p>{course?.courseDescription}</p>
@@ -72,7 +72,7 @@ const CourseDetail = (): React.JSX.Element => {
                     </article>
                 </Box>
                 <Box className="course-detail_values">
-                    <Box className="course-detail_values-wrapper">
+                    <Box className="course-detail_values-wrapper" data-testid="course-detail-values-wrapper">
                         <Box className="course-detail_values-description">
                             <h2>Course content</h2>
                             <ul>
@@ -90,7 +90,7 @@ const CourseDetail = (): React.JSX.Element => {
                             </ul>
                         </Box>
                     </Box>
-                    <Box className="course-detail_outro">
+                    <Box className="course-detail_outro" data-testid="course-detail-outro">
                         <ul>
                             <li>{course?.courseOutro}</li>
                         </ul>
