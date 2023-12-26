@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const Community = () => {
     return (
-        <Container maxWidth={false} className="community-container">
-            <Box className="community-container-wrapper">
-                <Box className="community-container_content">
+        <Container maxWidth={false} className="community-container" data-testid="community-container">
+            <Box className="community-container-wrapper" data-testid="community-container-wrapper">
+                <Box className="community-container_content" data-testid="community-container-content">
                     <h1>Our Community</h1>
-                    <p>{`Our first priority is your success, and we're here to support you in reaching your trading objectives. 
+                    <p data-testid="community-content-paragraph">{`Our first priority is your success, and we're here to support you in reaching your trading objectives. 
                     We're thrilled to have you on board and are looking forward to watching you develop as a trader. 
                     Explore the site, join the community and make connections with other traders at the FX Factor`}</p>
                 </Box>

@@ -73,8 +73,10 @@ const SubscribeForm = ({
     }, [isError]);
 
     return (
-        <form onSubmit={formik.handleSubmit}>
-            {showError && <span className={`subscription-message`}>unable to subscribe at the moment, please try in few minutes</span>}
+        <form onSubmit={formik.handleSubmit} role="form">
+            {showError && <span className={`subscription-message`}>
+                unable to subscribe at the moment, please try in few minutes</span>
+            }
             <Box className="subscribe_form-wrapper">
                 <InputField
                     id="email"
@@ -93,6 +95,7 @@ const SubscribeForm = ({
                             : ""
                     }
                     className="subscribe-input"
+                    data-testid="subscribe-input"
                 />
                 <CustomButton
                     title={isLoading ? "loading..." : "Subscribe"}
@@ -126,18 +129,18 @@ const Footer = () => {
     const postUrl = `${API_KEY}?u=${API_KEY_U}&id=${API_KEY_D}`;
 
     return (
-        <section className="footer-container">
+        <section className="footer-container" data-testid="footer-container">
             <section className="footer_text-content">
                 <article>
                     <h1>Stay Informed !</h1>
-                    <p>
+                    <p data-testid="footer-subscription-paragraph">
                         Subscribe to our newsletter for the latest forex insights, market
                         updates, and exclusive offers. Join our community of traders and
                         enhance your forex journey.
                     </p>
                 </article>
             </section>
-            <section className="footer_form">
+            <section className="footer_form" data-testid="footer-form">
                 <MailchimpSubscribe
                     url={postUrl}
                     render={({ status, message, subscribe }: any) => (
@@ -149,7 +152,7 @@ const Footer = () => {
                     )}
                 />
             </section>
-            <section className="footer_signature">
+            <section className="footer_signature" data-testid="footer-signature">
                 <Box>
                     <img
                         src={
@@ -161,7 +164,7 @@ const Footer = () => {
                 </Box>
                 <p>
                     {" "}
-                    <MdLocationPin size={20} /> 78, Egbe Road, Iyana-Ejigbo, Lagos
+                    <MdLocationPin size={20} title="location-icon"/> 78, Egbe Road, Iyana-Ejigbo, Lagos
                 </p>
                 <div className="footer_media">
                     <span className="footer_social-media_icons">
@@ -169,7 +172,7 @@ const Footer = () => {
                             to="https://x.com/Fx_Factor?t=U_piOfAxgEJOgLUHjUwTig&s=09"
                             target="_blank"
                         >
-                            <RiTwitterXFill />
+                            <RiTwitterXFill title="twitter-icon"/>
                         </Link>
                     </span>
                     <span className="footer_social-media_icons">
@@ -177,12 +180,12 @@ const Footer = () => {
                             to="https://instagram.com/trade.fxfactor?igshid=YTQwZjQ0NmI0OA=="
                             target="_blank"
                         >
-                            <FaInstagram />
+                            <FaInstagram title="instagram-icon"/>
                         </Link>
                     </span>
                     <span className="footer_social-media_icons">
                         <Link to="https://t.me/+oq9BDZt0rk4zMDJk" target="_blank">
-                            <LiaTelegram />
+                            <LiaTelegram title="telegram-icon"/>
                         </Link>
                     </span>
                     <span className="footer_social-media_icons">
@@ -190,7 +193,7 @@ const Footer = () => {
                             to="https://www.facebook.com/profile.php?id=61552635560767&mibextid=JRoKGi"
                             target="_blank"
                         >
-                            <SlSocialFacebook />
+                            <SlSocialFacebook title="facebook-icon"/>
                         </Link>
                     </span>
                 </div>
@@ -198,7 +201,7 @@ const Footer = () => {
             <div className="footer-copyright">
                 <p>copy right 2023 fx factor</p>
             </div>
-            <div className="quick-action-container">
+            <div className="quick-action-container" data-testid="footer-quick-action">
                 <QuickAction />
             </div>
         </section>
