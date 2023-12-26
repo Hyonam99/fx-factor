@@ -20,12 +20,18 @@ const CustomAccordion = (props: CustomAccordionProps) => {
     };
 
     return (
-        <div style={{ marginBottom: '8px' }} className={caStyle}>
-            <Accordion expanded={expanded === `panel${itemIndex}`} onChange={handleChange(`panel${itemIndex}`)} className={className}>
+        <div style={{ marginBottom: '8px' }} className={caStyle} data-testid="accordion-container">
+            <Accordion 
+                expanded={expanded === `panel${itemIndex}`}
+                onChange={handleChange(`panel${itemIndex}`)}
+                className={className}
+                data-testid="accordion-component"
+            >
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<ExpandMoreIcon titleAccess='expand-icon'/>}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
+                    data-testid="accordion-summary"
                 >
                     <Typography sx={{ width: `${miniDetails !== undefined ? '53%' : '100%'}`, flexShrink: 0 }}>
                         {title}
@@ -34,7 +40,7 @@ const CustomAccordion = (props: CustomAccordionProps) => {
                         {expanded === false && miniDetails}
                     </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails data-testid="accordion-details">
                     {mainContent}
                 </AccordionDetails>
             </Accordion>

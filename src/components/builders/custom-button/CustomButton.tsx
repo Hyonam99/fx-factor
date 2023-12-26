@@ -27,7 +27,7 @@ const CustomButton = (props: CustomButtonProps): React.JSX.Element => {
             disabled={disabled}
             className={`custom-button ${className}`}
         >
-            {title}
+            {title} 
         </Button>
     );
 };

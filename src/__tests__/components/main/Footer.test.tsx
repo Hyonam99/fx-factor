@@ -46,7 +46,7 @@ describe("Footer Component", () => {
 
         await waitFor(() => expect(getByText("email address is required")).toBeInTheDocument())
 
-        //The test case below is tempoarily commented until a solution is found for testing MUI custom input component
+        //The test case below is temporarily commented until a solution is found for testing MUI custom input component
 
         // act(() => {
         //     fireEvent.change(inputField, { target: { value: 123456 } })
