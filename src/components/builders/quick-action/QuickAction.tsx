@@ -43,7 +43,8 @@ const QuickAction = () => {
                 ariaLabel="SpeedDial"
                 sx={{ position: "absolute", bottom: 0, right: 8 }}
                 className="quick-action"
-                icon={<RiCustomerService2Fill size={22} />}
+                icon={<RiCustomerService2Fill size={22} title="quick-action-icon"/>}
+                data-testid="quick-action-component"
             >
                 {actions.map((action) => (
                     <SpeedDialAction
@@ -51,6 +52,7 @@ const QuickAction = () => {
                         icon={action.icon}
                         tooltipTitle={action.name}
                         className="quick-actions-buttons"
+                        data-testid="quick-action-buttons"
                     />
                 ))}
             </SpeedDial>

@@ -36,7 +36,7 @@ describe("Footer Component", () => {
     })
 
     it("functions properly", async () => {
-        const { getByText, getByRole } = _render(<Footer />)
+        const { getByText, getByRole, getByLabelText } = _render(<Footer />)
 
         const subscribeButton = getByRole("button", { name: "Subscribe" })
 
@@ -46,27 +46,23 @@ describe("Footer Component", () => {
 
         await waitFor(() => expect(getByText("email address is required")).toBeInTheDocument())
 
-        //The test case below is temporarily commented until a solution is found for testing MUI custom input component
+        const inputField = getByLabelText("Email Address")
 
-        // act(() => {
-        //     fireEvent.change(inputField, { target: { value: 123456 } })
-        // })
-        // act(() => {
-        //     userEvent.click(subscribeButton)
-        // })
+        act(() => {
+            fireEvent.change(inputField, { target: { value: 123456 } })
+        })
+        act(() => {
+            userEvent.click(subscribeButton)
+        })
 
-        // await waitFor(() => expect(getByText("invalid email format")).toBeInTheDocument())
+        await waitFor(() => expect(getByText("invalid email format")).toBeInTheDocument())
 
-        // act(() => {
-        //     fireEvent.change(inputField, { target: { value: "randomperson@email.com" } })
-        // })
-        // act(() => {
-        //     userEvent.click(subscribeButton)
-        // })
-
-        // subscribeButton = getByRole("button", { name: "loading..." })
-
-        // expect(subscribeButton).toBeDisabled()
+        act(() => {
+            fireEvent.change(inputField, { target: { value: "randomperson@email.com" } })
+        })
+        act(() => {
+            userEvent.click(subscribeButton)
+        })
 
     })
 })

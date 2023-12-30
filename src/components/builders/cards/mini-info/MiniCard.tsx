@@ -18,7 +18,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 const MiniCard = (props: MiniCardProps) => {
     const { cardDetails, cardTitle, imageUrl, avatarAlt, icon } = props
     return (
-        <Box sx={{ flexGrow: 1, overflow: "hidden", px: 3 }}>
+        <Box sx={{ flexGrow: 1, overflow: "hidden", px: 3 }} data-testid="minicard-component">
             <StyledPaper
                 sx={{
                     my: 1,

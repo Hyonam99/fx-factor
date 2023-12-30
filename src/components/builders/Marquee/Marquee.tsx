@@ -44,7 +44,7 @@ const Marquee = () => {
     ]
     return (
         <>
-            <Box className="marquee-container">
+            <Box className="marquee-container" data-testid="marquee-container">
                 <TickerTape colorTheme="light" largeChartUrl="false" displayMode="compact" symbols={symbols}/>
             </Box>
         </>

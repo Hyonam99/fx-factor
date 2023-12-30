@@ -61,7 +61,7 @@ const UserMobileNav = () => {
 
                 {Links.map((link) => (
                     <li key={link.linkName}>
-                        <Link to={link.linkUrl}>{link.linkName}</Link>
+                        <Link to={link.linkUrl} data-testid="mobile-nav-links">{link.linkName}</Link>
                     </li>
                 ))}
 
@@ -72,7 +72,7 @@ const UserMobileNav = () => {
     return (
         <div>
             <Button onClick={toggleDrawer('top', !state.top)}>
-                { !state.top ? <FiMenu size={26} color='white'/> : <RxCross2 size={26} color='white'/> }
+                { !state.top ? <FiMenu size={26} color='white' title='menu-open'/> : <RxCross2 size={26} color='white' title='menu-close'/> }
             </Button>
             <Drawer
                 anchor={'top'}
@@ -80,6 +80,7 @@ const UserMobileNav = () => {
                 onClose={toggleDrawer('top', false)}
                 className='custom-drawer'
                 transitionDuration={500}
+                data-testid="mobile-menu-drawer"
             >
                 {list('top')}
             </Drawer>

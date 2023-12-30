@@ -20,7 +20,16 @@ const AdvancedRealTimeChart = () => {
     )
 }
 
+const TickerTape = () => {
+    return (
+        <>
+            <div>USDCAD</div>
+        </>
+    )
+}
+
 module.exports = {
     ForexCrossRates,
-    AdvancedRealTimeChart
+    AdvancedRealTimeChart,
+    TickerTape
 };

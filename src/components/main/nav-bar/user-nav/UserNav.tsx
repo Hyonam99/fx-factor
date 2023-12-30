@@ -21,7 +21,7 @@ const UserNav = () => {
                             src={
                                 "https://res.cloudinary.com/maesan-product/image/upload/v1698565851/fx-factor/logo-short-clipped_bmuu6l.png"
                             }
-                            alt="fx-factor-logo"
+                            alt="fx-factor-logo-short"
                             className="logo-short"
                         />
                     </Link>
@@ -29,7 +29,7 @@ const UserNav = () => {
                 <ul>
                     {Links.map((link) => (
                         <li key={link.linkName}>
-                            <Link to={link.linkUrl}>{link.linkName}</Link>
+                            <Link to={link.linkUrl} data-testid="desktop-nav-links">{link.linkName}</Link>
                         </li>
                     ))}
                 </ul>
