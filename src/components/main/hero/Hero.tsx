@@ -29,7 +29,7 @@ const Hero = (): React.JSX.Element => {
                     variants={itemVariants(1.8)}
                     className="hero-container_wrapper_buttons"
                 >
-                    <Link to='/courses'>
+                    <Link to='/courses' data-testid="hero-courses-link">
                         <CustomButton title='Get A Course' size='large' color="primary"/>
                     </Link>
                 </motion.div>

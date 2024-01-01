@@ -15,7 +15,7 @@ const MarketPricing = () => {
 
             <Box className="market-price-container_table-link" data-testid="chart-link-container">
                 <Box className="link_wrapper">
-                    <Link to="/currency-details">View technical chart</Link>
+                    <Link to="/currency-details" data-testid="technical-chart-link">View technical chart</Link>
                 </Box>
             </Box>
             <Box className="market-price-container_table" data-testid="forex-rates-container">

@@ -28,6 +28,7 @@ const CourseCard = (props: CourseCardProps) => {
                         alt="forex-course"
                         height="140"
                         image={courseItem.courseImage}
+                        data-testid="course-card-image"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h6" component="div" data-testid="course-card-title">
