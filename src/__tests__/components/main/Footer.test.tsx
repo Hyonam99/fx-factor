@@ -24,7 +24,7 @@ describe("Footer Component", () => {
         expect(getByRole("button", { name: "Subscribe" })).toBeInTheDocument()
         expect(getByTestId("footer-signature")).toBeInTheDocument()
         expect(getByText("78, Egbe Road, Iyana-Ejigbo, Lagos")).toBeInTheDocument()
-        expect(getByText("copy right 2023 fx factor")).toBeInTheDocument()
+        expect(getByText(`copy right ${new Date().getFullYear()} fx factor`)).toBeInTheDocument()
         expect(getByTestId("footer-quick-action")).toBeInTheDocument()
 
         expect(getByTitle("location-icon")).toBeInTheDocument()

@@ -27,7 +27,7 @@ describe("Featured component", () => {
 
 		const expandIcon = getAllByTitle("expand-icon")
         const accordionDetails = getAllByTestId("accordion-details")
-		const randIndex = Math.floor(Math.random() * 2) + 1;
+		const randomIndex = Math.floor(Math.random() * 3);
 
 		expect(expandIcon).toHaveLength(3)
         expect(accordionDetails).toHaveLength(3)
@@ -36,9 +36,9 @@ describe("Featured component", () => {
 		})
 
         act(() => {
-            userEvent.click(expandIcon[randIndex])
+            userEvent.click(expandIcon[randomIndex])
         })
 
-        expect(accordionDetails[randIndex]).toBeVisible()
+        expect(accordionDetails[randomIndex]).toBeVisible()
     })
 })

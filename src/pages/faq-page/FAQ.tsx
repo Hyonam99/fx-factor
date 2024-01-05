@@ -13,7 +13,7 @@ const FAQ = (): React.JSX.Element => {
 
     return (
         <>
-            <section className="faq-container">
+            <section className="faq-container" data-testid="faq-container">
                 <article>
                     <h1>Faq</h1>
                 </article>

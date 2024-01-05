@@ -199,7 +199,7 @@ const Footer = () => {
                 </div>
             </section>
             <div className="footer-copyright">
-                <p>copy right 2023 fx factor</p>
+                <p>copy right {new Date().getFullYear()} fx factor</p>
             </div>
             <div className="quick-action-container" data-testid="footer-quick-action">
                 <QuickAction />

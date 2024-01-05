@@ -6,7 +6,7 @@ import './about-page.scss'
 
 const AboutPage = (): React.JSX.Element => {
     return (
-        <Container maxWidth={false} className="about-container">
+        <Container maxWidth={false} className="about-container" data-testid="about-container">
             <Box className="about-container_text-wrapper">
                 <h1>The Fx Factor: A key, a family.</h1>
                 <p>
