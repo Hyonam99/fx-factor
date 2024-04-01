@@ -58,7 +58,7 @@ const App = (): React.JSX.Element => {
 						}
 					/>
 					<Route
-						path="/promotion/home"
+						path="/promotion"
 						element={
 							<UserLayout isAds>
 								<Promotion />
@@ -66,7 +66,7 @@ const App = (): React.JSX.Element => {
 						}
 					/>
 					<Route
-						path="/promotion/purchase"
+						path="/sales"
 						element={
 							<UserLayout isAds>
 								<Sales />
