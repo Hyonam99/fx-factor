@@ -1,0 +1,89 @@
+@import '../../style-palette';
+
+.promotion-header {
+    border: 0;
+    border-radius: 1.4rem;
+    background: url("https://res.cloudinary.com/maesan-product/image/upload/v1693229032/fx-factor/hero-bg-chart_qvntqy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+    color: white;
+    margin-bottom: .8rem;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba($color: #000000, $alpha: 0.3);
+        border-radius: 1.4rem;
+    }
+
+    h1 {
+        position: relative;
+        font-size: 3rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+    }
+
+
+    .link-btn {
+        padding: .4rem .8rem;
+        border-radius: 4px;
+        border: 0;
+        color: white;
+        background: $primary-color;
+        width: fit-content;
+    }
+}
+
+.course-second-content {
+    ul {
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    margin-bottom: .8rem;
+}
+
+.email-course-card {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px rgba($color: #000000, $alpha: 0.3);
+    max-width: 500px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.email-course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 468px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
