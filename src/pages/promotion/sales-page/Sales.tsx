@@ -3,13 +3,17 @@ import { Box, Heading, Text, Card, CardHeader } from "@chakra-ui/react";
 import "../promotion.scss";
 import { Link } from "react-router-dom";
 import {
-	CustomAccordion,
 	CustomButton,
 	InputField,
 } from "components/components-exports";
-import { adsContentBottom, adsContentTop } from "mocked-data/mocked-data";
+import { adsContentBottom, adsContentFifth, adsContentFourth, adsContentSecond, adsContentThird, adsContentTop } from "mocked-data/mocked-data";
 import parse from "html-react-parser";
 import { useFormik } from "formik";
+import Tweet1 from "assets/tweet-1.png"
+import Tweet2 from "assets/tweet-2.png"
+import Tweet3 from "assets/tweet-3.png"
+import Tweet4 from "assets/tweet-4.png"
+import Tweet5 from "assets/tweet-5.png"
 
 const Sales = () => {
 	const newsLetterSchema = Yup.object().shape({
@@ -27,7 +31,7 @@ const Sales = () => {
 		},
 	});
 	return (
-		<Box padding={16}>
+		<Box paddingBottom={8}>
 			<Box className="promotion-header">
 				<Box
 					padding={24}
@@ -37,8 +41,10 @@ const Sales = () => {
 					flexDirection={"column"}
 					gap={".6rem"}
 				>
-					<Heading as={"h1"}>Trade with</Heading>
-					<Heading as={"h4"}>thefxfactor</Heading>
+					<Heading as={"h1"}>
+						Trade with <br />
+						thefxfactor
+					</Heading>
 					<Text as={"p"}>Get access to a free 7days email course</Text>
 					<Link to={"#get-course"} className="link-btn">
 						Get a free course
@@ -46,8 +52,17 @@ const Sales = () => {
 				</Box>
 			</Box>
 			<Box className="course-second-content">{parse(adsContentTop)}</Box>
+			<img src={Tweet1} alt="tweet-1" />
+			<Box className="course-second-content">{parse(adsContentSecond)}</Box>
+			<img src={Tweet2} alt="tweet-2" />
+			<Box className="course-second-content">{parse(adsContentThird)}</Box>
+			<img src={Tweet3} alt="tweet-3" />
+			<Box className="course-second-content">{parse(adsContentFourth)}</Box>
+			<img src={Tweet4} alt="tweet-4" />
+			<Box className="course-second-content">{parse(adsContentFifth)}</Box>
+			<img src={Tweet5} alt="tweet-5" />
 			<Box className="course-second-content">{parse(adsContentBottom)}</Box>
-			<Box>
+			<Box paddingX={".8rem"}>
 				<Card className="email-course-card">
 					<CardHeader paddingBottom={8}>
 						Sign up for a free email course

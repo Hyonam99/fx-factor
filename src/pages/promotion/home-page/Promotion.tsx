@@ -5,8 +5,7 @@ import {
 	Heading,
 	Text,
 	Card,
-	CardHeader,
-	SimpleGrid,
+	CardHeader
 } from "@chakra-ui/react";
 import "../promotion.scss";
 import { Link } from "react-router-dom";
@@ -35,7 +34,7 @@ const Promotion = () => {
 		},
 	});
 	return (
-		<Box padding={16}>
+		<Box paddingBottom={8}>
 			<Box className="promotion-header">
 				<Box
 					padding={24}
@@ -45,8 +44,7 @@ const Promotion = () => {
 					flexDirection={"column"}
 					gap={".6rem"}
 				>
-					<Heading as={"h1"}>Trade with</Heading>
-					<Heading as={"h4"}>thefxfactor</Heading>
+					<Heading as={"h1"}>Trade with <br />thefxfactor</Heading>
 					<Text as={"p"}>Get access to a free 7days email course</Text>
 					<Link to={"#get-course"} className="link-btn">
 						Get a free course
@@ -62,7 +60,7 @@ const Promotion = () => {
 				/>
 			</Box>
 			<Box className="course-second-content">{parse(adsContentBottom)}</Box>
-			<Box>
+			<Box paddingX={".8rem"}>
 				<Card className="email-course-card">
 					<CardHeader paddingBottom={8}>
 						Sign up for a free email course
